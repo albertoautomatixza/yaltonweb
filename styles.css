@@ -388,7 +388,7 @@ main {
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.3s var(--ease);
+  transition: all 0.4s var(--ease);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -399,10 +399,12 @@ main {
 .hero-btn-primary {
   background: var(--yalton-green);
   color: white;
+  border: 1px solid var(--yalton-green);
 }
 
 .hero-btn-primary:hover {
-  background: var(--yalton-green-light);
+  background: linear-gradient(135deg, var(--yalton-green), var(--accent-color));
+  border-color: var(--accent-color);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(4, 82, 24, 0.4);
 }
@@ -414,8 +416,11 @@ main {
 }
 
 .hero-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.18);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, var(--yalton-green), var(--accent-color));
+  border-color: var(--accent-color);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(4, 82, 24, 0.4);
 }
 
 .scroll-indicator {
