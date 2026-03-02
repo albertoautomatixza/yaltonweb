@@ -317,6 +317,23 @@ if (document.readyState === 'loading') {
   initTextRotator();
 }
 
+const techItems = document.querySelectorAll('[data-tech-item]');
+if (techItems.length) {
+  const techObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        techObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+  techItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 0.2}s`;
+    techObserver.observe(item);
+  });
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
