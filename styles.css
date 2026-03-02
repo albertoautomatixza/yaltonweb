@@ -294,14 +294,46 @@ main {
   color: var(--accent-color);
 }
 
+.hero-subtitle-rotator {
+  position: relative;
+  max-width: 680px;
+  min-height: 5rem;
+  margin-bottom: 3.5rem;
+  opacity: 0;
+  animation: fadeInUp 1s var(--ease) 0.8s forwards;
+}
+
 .hero-subtitle {
   font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   color: rgba(255, 255, 255, 0.7);
-  max-width: 680px;
-  margin-bottom: 3.5rem;
   line-height: 1.6;
+  margin: 0;
+}
+
+.hero-rotating-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   opacity: 0;
-  animation: fadeInUp 1s var(--ease) 0.8s forwards;
+  filter: blur(12px);
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, filter 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.hero-rotating-text.active {
+  position: relative;
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.hero-rotating-text.exiting {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(-10px);
 }
 
 .hero-stats {

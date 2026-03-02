@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { initI18n } from './i18n.js';
+import { initTextRotator } from './text-rotator.js';
 
 let scene, camera, renderer, poloShirt;
 let wireframeVersion;
@@ -308,10 +309,12 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     init();
     initI18n();
+    initTextRotator();
   });
 } else {
   init();
   initI18n();
+  initTextRotator();
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
