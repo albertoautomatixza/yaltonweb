@@ -71,6 +71,10 @@ body {
   transition: filter 0.4s var(--ease);
 }
 
+.nav-logo:hover .nav-logo-img {
+  filter: none;
+}
+
 .nav-right {
   display: flex;
   align-items: center;
