@@ -39,11 +39,11 @@ function init() {
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
   scene.add(ambientLight);
 
-  const directionalLight = new THREE.DirectionalLight(0xabff02, 0.8);
+  const directionalLight = new THREE.DirectionalLight(0x045218, 0.8);
   directionalLight.position.set(5, 5, 5);
   scene.add(directionalLight);
 
-  const backLight = new THREE.DirectionalLight(0xabff02, 0.4);
+  const backLight = new THREE.DirectionalLight(0x045218, 0.4);
   backLight.position.set(-5, -5, -5);
   scene.add(backLight);
 
@@ -58,10 +58,10 @@ function init() {
 function createPoloShirt() {
   const geometry = new THREE.BoxGeometry(1.2, 1.5, 0.3);
   const material = new THREE.MeshStandardMaterial({
-    color: 0xabff02,
+    color: 0x045218,
     metalness: 0.3,
     roughness: 0.4,
-    emissive: 0xabff02,
+    emissive: 0x045218,
     emissiveIntensity: 0.1
   });
 
@@ -87,7 +87,7 @@ function createPoloShirt() {
   poloShirt.add(rightSleeve);
 
   const wireframeMaterial = new THREE.MeshBasicMaterial({
-    color: 0xabff02,
+    color: 0x045218,
     wireframe: true,
     transparent: true,
     opacity: 0
