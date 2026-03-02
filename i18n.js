@@ -7,7 +7,7 @@ const translations = {
     'nav.contacto': 'Contacto',
     'nav.cotizar': 'Cotizar',
 
-    'hero.label': '35+ anos de experiencia',
+    'hero.label': '+35 años de experiencia',
     'hero.line1': 'Manufactura',
     'hero.line2': 'Textil de',
     'hero.line3': 'Proxima Generacion',
@@ -107,7 +107,7 @@ const translations = {
     'nav.contacto': 'Contact',
     'nav.cotizar': 'Get a Quote',
 
-    'hero.label': '35+ years of experience',
+    'hero.label': '+35 years of experience',
     'hero.line1': 'Next Generation',
     'hero.line2': 'Textile',
     'hero.line3': 'Manufacturing',
