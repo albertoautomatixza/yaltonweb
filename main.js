@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { initI18n } from './i18n.js';
 
 let scene, camera, renderer, poloShirt;
 let wireframeVersion;
@@ -304,9 +305,13 @@ function animate() {
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('DOMContentLoaded', () => {
+    init();
+    initI18n();
+  });
 } else {
   init();
+  initI18n();
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

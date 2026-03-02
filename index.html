@@ -15,13 +15,14 @@
       <a href="#inicio" class="nav-logo"><img src="/YALTON_GLOBAL.png" alt="Yalton" class="nav-logo-img"></a>
       <div class="nav-right">
         <div class="nav-links">
-          <a href="#inicio">Empresa</a>
-          <a href="#tecnologia">Catalogo</a>
-          <a href="#servicios">Oportunidades</a>
-          <a href="#proceso">Proceso</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#inicio" data-i18n="nav.empresa">Empresa</a>
+          <a href="#tecnologia" data-i18n="nav.catalogo">Catalogo</a>
+          <a href="#servicios" data-i18n="nav.oportunidades">Oportunidades</a>
+          <a href="#proceso" data-i18n="nav.proceso">Proceso</a>
+          <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
         </div>
-        <button class="nav-cta">Cotizar</button>
+        <button class="nav-cta" data-i18n="nav.cotizar">Cotizar</button>
+        <button class="nav-lang" id="langToggle">EN</button>
       </div>
       <button class="nav-hamburger" aria-label="Menu">
         <span></span>
@@ -39,34 +40,34 @@
         <img src="https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Industrial manufacturing">
       </div>
       <div class="hero-content">
-        <div class="hero-label">35+ anos de experiencia</div>
+        <div class="hero-label" data-i18n="hero.label">35+ anos de experiencia</div>
         <h1 class="hero-title">
-          <span class="hero-line">Manufactura</span>
-          <span class="hero-line">Textil de</span>
-          <span class="hero-line highlight">Proxima Generacion</span>
+          <span class="hero-line" data-i18n="hero.line1">Manufactura</span>
+          <span class="hero-line" data-i18n="hero.line2">Textil de</span>
+          <span class="hero-line highlight" data-i18n="hero.line3">Proxima Generacion</span>
         </h1>
-        <p class="hero-subtitle">Uniformes industriales de alta precision para la infraestructura critica de Mexico. Calidad, durabilidad y diseno en cada prenda.</p>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Uniformes industriales de alta precision para la infraestructura critica de Mexico. Calidad, durabilidad y diseno en cada prenda.</p>
         <div class="hero-stats">
           <div class="stat-item">
             <div class="stat-number">2,100+</div>
-            <div class="stat-label">Clientes Activos</div>
+            <div class="stat-label" data-i18n="hero.stat1">Clientes Activos</div>
           </div>
           <div class="stat-item">
             <div class="stat-number">100K+</div>
-            <div class="stat-label">Personas Uniformadas/Ano</div>
+            <div class="stat-label" data-i18n="hero.stat2">Personas Uniformadas/Ano</div>
           </div>
           <div class="stat-item">
             <div class="stat-number">90%</div>
-            <div class="stat-label">Retencion de Clientes</div>
+            <div class="stat-label" data-i18n="hero.stat3">Retencion de Clientes</div>
           </div>
           <div class="stat-item">
             <div class="stat-number">24/7</div>
-            <div class="stat-label">Soporte al Cliente</div>
+            <div class="stat-label" data-i18n="hero.stat4">Soporte al Cliente</div>
           </div>
         </div>
         <div class="hero-buttons">
-          <a href="#contacto" class="hero-btn hero-btn-primary">Solicitar Cotizacion</a>
-          <a href="#tecnologia" class="hero-btn hero-btn-secondary">Ver Catalogo</a>
+          <a href="#contacto" class="hero-btn hero-btn-primary" data-i18n="hero.cta1">Solicitar Cotizacion</a>
+          <a href="#tecnologia" class="hero-btn hero-btn-secondary" data-i18n="hero.cta2">Ver Catalogo</a>
         </div>
       </div>
       <div class="scroll-indicator">
@@ -78,8 +79,8 @@
     <section id="tecnologia" class="tech-section">
       <div class="section-container">
         <div class="section-header">
-          <span class="section-label">Tecnología Avanzada</span>
-          <h2 class="section-title">Precisión en cada puntada</h2>
+          <span class="section-label" data-i18n="tech.label">Tecnología Avanzada</span>
+          <h2 class="section-title" data-i18n="tech.title">Precisión en cada puntada</h2>
         </div>
         <div class="tech-grid">
           <div class="tech-card">
@@ -88,8 +89,8 @@
                 <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
               </svg>
             </div>
-            <h3>Diseño Digital</h3>
-            <p>Modelado 3D y simulación de prendas antes de producción</p>
+            <h3 data-i18n="tech.card1.title">Diseño Digital</h3>
+            <p data-i18n="tech.card1.desc">Modelado 3D y simulación de prendas antes de producción</p>
           </div>
           <div class="tech-card">
             <div class="tech-icon">
@@ -97,8 +98,8 @@
                 <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
               </svg>
             </div>
-            <h3>Manufactura Rápida</h3>
-            <p>Entregas puntuales y producción escalable</p>
+            <h3 data-i18n="tech.card2.title">Manufactura Rápida</h3>
+            <p data-i18n="tech.card2.desc">Entregas puntuales y producción escalable</p>
           </div>
           <div class="tech-card">
             <div class="tech-icon">
@@ -106,8 +107,8 @@
                 <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
               </svg>
             </div>
-            <h3>Control de Calidad</h3>
-            <p>Telas certificadas con propiedades especiales</p>
+            <h3 data-i18n="tech.card3.title">Control de Calidad</h3>
+            <p data-i18n="tech.card3.desc">Telas certificadas con propiedades especiales</p>
           </div>
         </div>
       </div>
@@ -117,29 +118,29 @@
       <div class="section-container">
         <div class="wireframe-content">
           <div class="wireframe-text">
-            <span class="section-label">Ingeniería de Precisión</span>
-            <h2 class="section-title">Del concepto a la confección</h2>
-            <p class="section-description">Cada prenda pasa por un proceso de ingeniería detallado, desde el diseño técnico hasta el corte de patrones optimizado para máxima durabilidad y confort.</p>
+            <span class="section-label" data-i18n="wire.label">Ingeniería de Precisión</span>
+            <h2 class="section-title" data-i18n="wire.title">Del concepto a la confección</h2>
+            <p class="section-description" data-i18n="wire.desc">Cada prenda pasa por un proceso de ingeniería detallado, desde el diseño técnico hasta el corte de patrones optimizado para máxima durabilidad y confort.</p>
             <div class="feature-list">
               <div class="feature-item">
                 <div class="feature-check">✓</div>
                 <div>
-                  <h4>Patronaje Digital</h4>
-                  <p>Optimización computarizada de cortes</p>
+                  <h4 data-i18n="wire.f1.title">Patronaje Digital</h4>
+                  <p data-i18n="wire.f1.desc">Optimización computarizada de cortes</p>
                 </div>
               </div>
               <div class="feature-item">
                 <div class="feature-check">✓</div>
                 <div>
-                  <h4>Análisis de Resistencia</h4>
-                  <p>Simulación de desgaste y durabilidad</p>
+                  <h4 data-i18n="wire.f2.title">Análisis de Resistencia</h4>
+                  <p data-i18n="wire.f2.desc">Simulación de desgaste y durabilidad</p>
                 </div>
               </div>
               <div class="feature-item">
                 <div class="feature-check">✓</div>
                 <div>
-                  <h4>Personalización Avanzada</h4>
-                  <p>Bordado, serigrafía y sublimación</p>
+                  <h4 data-i18n="wire.f3.title">Personalización Avanzada</h4>
+                  <p data-i18n="wire.f3.desc">Bordado, serigrafía y sublimación</p>
                 </div>
               </div>
             </div>
@@ -151,8 +152,8 @@
     <section id="servicios" class="services-section">
       <div class="section-container">
         <div class="section-header centered">
-          <span class="section-label">Sectores que Atendemos</span>
-          <h2 class="section-title">Uniformes para infraestructura crítica</h2>
+          <span class="section-label" data-i18n="serv.label">Sectores que Atendemos</span>
+          <h2 class="section-title" data-i18n="serv.title">Uniformes para infraestructura crítica</h2>
         </div>
         <div class="services-grid">
           <div class="service-card">
@@ -163,8 +164,8 @@
                 <rect x="60" y="30" width="80" height="40" rx="5"/>
               </svg>
             </div>
-            <h3>Industria Automotriz</h3>
-            <p>Uniformes resistentes para manufactura de clase mundial</p>
+            <h3 data-i18n="serv.c1.t">Industria Automotriz</h3>
+            <p data-i18n="serv.c1.d">Uniformes resistentes para manufactura de clase mundial</p>
           </div>
           <div class="service-card">
             <div class="service-wireframe">
@@ -174,8 +175,8 @@
                 <path d="M100 80 L100 120 M80 100 L120 100"/>
               </svg>
             </div>
-            <h3>Energía & Utilities</h3>
-            <p>Prendas ignífugas y antiestáticas certificadas</p>
+            <h3 data-i18n="serv.c2.t">Energía & Utilities</h3>
+            <p data-i18n="serv.c2.d">Prendas ignífugas y antiestáticas certificadas</p>
           </div>
           <div class="service-card">
             <div class="service-wireframe">
@@ -186,8 +187,8 @@
                 <path d="M50 110 L30 110 L30 130 M150 110 L170 110 L170 130"/>
               </svg>
             </div>
-            <h3>Logística & Transporte</h3>
-            <p>Diseños ergonómicos para operaciones 24/7</p>
+            <h3 data-i18n="serv.c3.t">Logística & Transporte</h3>
+            <p data-i18n="serv.c3.d">Diseños ergonómicos para operaciones 24/7</p>
           </div>
           <div class="service-card">
             <div class="service-wireframe">
@@ -197,8 +198,8 @@
                 <circle cx="100" cy="60" r="8"/>
               </svg>
             </div>
-            <h3>Construcción</h3>
-            <p>Alta visibilidad y protección en obra</p>
+            <h3 data-i18n="serv.c4.t">Construcción</h3>
+            <p data-i18n="serv.c4.d">Alta visibilidad y protección en obra</p>
           </div>
           <div class="service-card">
             <div class="service-wireframe">
@@ -208,8 +209,8 @@
                 <path d="M100 95 L100 115 M85 105 L115 105"/>
               </svg>
             </div>
-            <h3>Salud & Laboratorios</h3>
-            <p>Materiales antimicrobianos y esterilizables</p>
+            <h3 data-i18n="serv.c5.t">Salud & Laboratorios</h3>
+            <p data-i18n="serv.c5.d">Materiales antimicrobianos y esterilizables</p>
           </div>
           <div class="service-card">
             <div class="service-wireframe">
@@ -219,8 +220,8 @@
                 <circle cx="100" cy="100" r="5" fill="currentColor"/>
               </svg>
             </div>
-            <h3>Manufactura General</h3>
-            <p>Soluciones personalizadas para cada industria</p>
+            <h3 data-i18n="serv.c6.t">Manufactura General</h3>
+            <p data-i18n="serv.c6.d">Soluciones personalizadas para cada industria</p>
           </div>
         </div>
       </div>
@@ -229,32 +230,32 @@
     <section id="proceso" class="process-section">
       <div class="section-container">
         <div class="section-header centered">
-          <span class="section-label">Nuestro Proceso</span>
-          <h2 class="section-title">De la idea al uniforme</h2>
+          <span class="section-label" data-i18n="proc.label">Nuestro Proceso</span>
+          <h2 class="section-title" data-i18n="proc.title">De la idea al uniforme</h2>
         </div>
         <div class="process-timeline">
           <div class="process-step">
             <div class="process-number">01</div>
-            <h3>Consultoría</h3>
-            <p>Análisis de necesidades específicas de tu industria</p>
+            <h3 data-i18n="proc.s1.t">Consultoría</h3>
+            <p data-i18n="proc.s1.d">Análisis de necesidades específicas de tu industria</p>
           </div>
           <div class="process-connector"></div>
           <div class="process-step">
             <div class="process-number">02</div>
-            <h3>Diseño</h3>
-            <p>Creación de prototipos digitales y físicos</p>
+            <h3 data-i18n="proc.s2.t">Diseño</h3>
+            <p data-i18n="proc.s2.d">Creación de prototipos digitales y físicos</p>
           </div>
           <div class="process-connector"></div>
           <div class="process-step">
             <div class="process-number">03</div>
-            <h3>Producción</h3>
-            <p>Manufactura con control de calidad continuo</p>
+            <h3 data-i18n="proc.s3.t">Producción</h3>
+            <p data-i18n="proc.s3.d">Manufactura con control de calidad continuo</p>
           </div>
           <div class="process-connector"></div>
           <div class="process-step">
             <div class="process-number">04</div>
-            <h3>Entrega</h3>
-            <p>Logística puntual y servicio post-venta</p>
+            <h3 data-i18n="proc.s4.t">Entrega</h3>
+            <p data-i18n="proc.s4.d">Logística puntual y servicio post-venta</p>
           </div>
         </div>
       </div>
@@ -264,9 +265,9 @@
       <div class="section-container">
         <div class="contact-grid">
           <div class="contact-info">
-            <span class="section-label">Contacto</span>
-            <h2 class="section-title">Comencemos tu proyecto</h2>
-            <p class="section-description">Más de 35 años vistiendo a la industria mexicana con calidad y precisión.</p>
+            <span class="section-label" data-i18n="cont.label">Contacto</span>
+            <h2 class="section-title" data-i18n="cont.title">Comencemos tu proyecto</h2>
+            <p class="section-description" data-i18n="cont.desc">Más de 35 años vistiendo a la industria mexicana con calidad y precisión.</p>
 
             <div class="contact-details">
               <div class="contact-item">
@@ -276,7 +277,7 @@
                   </svg>
                 </div>
                 <div>
-                  <div class="contact-label">Teléfono</div>
+                  <div class="contact-label" data-i18n="cont.phone">Teléfono</div>
                   <div class="contact-value">(449) 915-1499 / 1480</div>
                 </div>
               </div>
@@ -301,8 +302,8 @@
                   </svg>
                 </div>
                 <div>
-                  <div class="contact-label">Ubicación</div>
-                  <div class="contact-value">República de Paraguay #412, Aguascalientes, México</div>
+                  <div class="contact-label" data-i18n="cont.location">Ubicación</div>
+                  <div class="contact-value" data-i18n="cont.address">República de Paraguay #412, Aguascalientes, México</div>
                 </div>
               </div>
             </div>
@@ -311,31 +312,31 @@
           <div class="contact-form-wrapper">
             <form class="contact-form">
               <div class="form-group">
-                <label for="nombre">Nombre completo</label>
+                <label for="nombre" data-i18n="form.name">Nombre completo</label>
                 <input type="text" id="nombre" name="nombre" required>
               </div>
 
               <div class="form-group">
-                <label for="email">Email corporativo</label>
+                <label for="email" data-i18n="form.email">Email corporativo</label>
                 <input type="email" id="email" name="email" required>
               </div>
 
               <div class="form-group">
-                <label for="empresa">Empresa</label>
+                <label for="empresa" data-i18n="form.company">Empresa</label>
                 <input type="text" id="empresa" name="empresa" required>
               </div>
 
               <div class="form-group">
-                <label for="telefono">Teléfono</label>
+                <label for="telefono" data-i18n="form.phone">Teléfono</label>
                 <input type="tel" id="telefono" name="telefono" required>
               </div>
 
               <div class="form-group full-width">
-                <label for="mensaje">¿Qué necesitas?</label>
+                <label for="mensaje" data-i18n="form.message">¿Qué necesitas?</label>
                 <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
               </div>
 
-              <button type="submit" class="submit-btn">
+              <button type="submit" class="submit-btn" data-i18n="form.submit">
                 Solicitar Cotización
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -353,39 +354,39 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">YALTON</div>
-          <p>35+ años vistiendo la industria mexicana con calidad, precisión e innovación.</p>
+          <p data-i18n="foot.brand">35+ años vistiendo la industria mexicana con calidad, precisión e innovación.</p>
         </div>
 
         <div class="footer-links">
-          <h4>Empresa</h4>
-          <a href="#inicio">Inicio</a>
-          <a href="#tecnologia">Tecnología</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#contacto">Contacto</a>
+          <h4 data-i18n="foot.empresa">Empresa</h4>
+          <a href="#inicio" data-i18n="foot.inicio">Inicio</a>
+          <a href="#tecnologia" data-i18n="foot.tecnologia">Tecnología</a>
+          <a href="#servicios" data-i18n="foot.servicios">Servicios</a>
+          <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
         </div>
 
         <div class="footer-links">
-          <h4>Servicios</h4>
-          <a href="#">Uniformes Industriales</a>
-          <a href="#">Diseño Personalizado</a>
-          <a href="#">Bordado y Serigrafía</a>
-          <a href="#">Pedidos en Línea</a>
+          <h4 data-i18n="foot.serviciosH">Servicios</h4>
+          <a href="#" data-i18n="foot.s1">Uniformes Industriales</a>
+          <a href="#" data-i18n="foot.s2">Diseño Personalizado</a>
+          <a href="#" data-i18n="foot.s3">Bordado y Serigrafía</a>
+          <a href="#" data-i18n="foot.s4">Pedidos en Línea</a>
         </div>
 
         <div class="footer-links">
-          <h4>Sectores</h4>
-          <a href="#">Automotriz</a>
-          <a href="#">Energía</a>
-          <a href="#">Logística</a>
-          <a href="#">Construcción</a>
+          <h4 data-i18n="foot.sectores">Sectores</h4>
+          <a href="#" data-i18n="foot.auto">Automotriz</a>
+          <a href="#" data-i18n="foot.energia">Energía</a>
+          <a href="#" data-i18n="foot.logistica">Logística</a>
+          <a href="#" data-i18n="foot.construccion">Construcción</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 Yalton Textil. Todos los derechos reservados.</p>
+        <p data-i18n="foot.copy">&copy; 2024 Yalton Textil. Todos los derechos reservados.</p>
         <div class="footer-legal">
-          <a href="#">Privacidad</a>
-          <a href="#">Términos</a>
+          <a href="#" data-i18n="foot.privacy">Privacidad</a>
+          <a href="#" data-i18n="foot.terms">Términos</a>
         </div>
       </div>
     </div>

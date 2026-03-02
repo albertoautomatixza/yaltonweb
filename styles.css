@@ -140,6 +140,29 @@ body {
   color: #ffffff;
 }
 
+.nav-lang {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.65rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  letter-spacing: 0.05em;
+  font-family: inherit;
+}
+
+.nav-lang:hover {
+  background: #2B3C2B;
+  border-color: #2B3C2B;
+  color: #ffffff;
+}
+
 .nav-hamburger {
   display: none;
   flex-direction: column;
