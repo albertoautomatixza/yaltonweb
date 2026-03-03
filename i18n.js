@@ -4,6 +4,7 @@ const translations = {
     'nav.catalogo': 'Catalogo',
     'nav.oportunidades': 'Oportunidades',
     'nav.proceso': 'Proceso',
+    'nav.clientes': 'Clientes',
     'nav.contacto': 'Contacto',
     'nav.cotizar': 'Cotizar',
 
@@ -148,6 +149,7 @@ const translations = {
     'nav.catalogo': 'Catalog',
     'nav.oportunidades': 'Opportunities',
     'nav.proceso': 'Process',
+    'nav.clientes': 'Clients',
     'nav.contacto': 'Contact',
     'nav.cotizar': 'Get a Quote',
 
