@@ -1450,9 +1450,10 @@ a.contact-link:hover {
 }
 
 .footer-logo img {
-  height: 60px;
+  height: 100px;
   width: auto;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .footer-brand p {
