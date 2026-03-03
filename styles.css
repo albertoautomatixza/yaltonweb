@@ -1706,19 +1706,22 @@ a.contact-link:hover {
   }
 
   .nav-right.mobile-open .nav-cta {
-    margin-top: 1rem;
+    display: block;
+    margin: 1rem 0 0 0;
     width: 100%;
+    box-sizing: border-box;
     text-align: center;
-    justify-content: center;
     padding: 0.875rem;
     font-size: 1rem;
   }
 
   .nav-right.mobile-open .nav-lang {
+    display: block;
     width: 100%;
+    box-sizing: border-box;
     text-align: center;
     padding: 0.75rem;
-    margin-top: 0.25rem;
+    margin: 0.5rem 0 0 0;
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 6px;
     font-size: 0.875rem;
