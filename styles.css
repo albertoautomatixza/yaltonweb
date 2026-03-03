@@ -886,9 +886,9 @@ main {
 }
 
 .process-center-logo {
-  width: 90px;
+  width: 200px;
   height: auto;
-  filter: brightness(0) saturate(100%) invert(17%) sepia(60%) saturate(1200%) hue-rotate(115deg) brightness(0.7);
+  object-fit: contain;
 }
 
 .process-node {
@@ -1337,7 +1337,7 @@ main {
   }
 
   .process-center-logo {
-    width: 60px;
+    width: 120px;
   }
 
   .section-title {
