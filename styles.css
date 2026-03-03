@@ -885,22 +885,10 @@ main {
   gap: 0.25rem;
 }
 
-.process-center-number {
-  font-size: 3.5rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--yalton-green), var(--accent-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-}
-
-.process-center-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--gray-400);
+.process-center-logo {
+  width: 90px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(60%) saturate(1200%) hue-rotate(115deg) brightness(0.7);
 }
 
 .process-node {
@@ -1348,8 +1336,8 @@ main {
     max-width: 140px;
   }
 
-  .process-center-number {
-    font-size: 2.5rem;
+  .process-center-logo {
+    width: 60px;
   }
 
   .section-title {
