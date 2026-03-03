@@ -366,6 +366,21 @@ if (techItems.length) {
   updateTechLines();
 }
 
+const wireframeSection = document.getElementById('wireframe');
+const poloClipRect = document.getElementById('poloClipRect');
+if (wireframeSection && poloClipRect) {
+  function updatePoloReveal() {
+    const rect = wireframeSection.getBoundingClientRect();
+    const wh = window.innerHeight;
+    const raw = (wh - rect.top) / (wh + rect.height * 0.4);
+    const progress = Math.min(Math.max(raw, 0), 1);
+    const revealWidth = progress * 400;
+    poloClipRect.setAttribute('width', String(revealWidth));
+    requestAnimationFrame(updatePoloReveal);
+  }
+  updatePoloReveal();
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();

@@ -494,9 +494,10 @@ main {
 }
 
 .wireframe-section {
-  padding: 10rem 2rem;
-  background: #f4f8f3;
+  padding: 5rem 2rem 6rem;
+  background: var(--yalton-green-dark);
   position: relative;
+  overflow: hidden;
 }
 
 .contact-section {
@@ -618,15 +619,78 @@ main {
   max-width: 600px;
 }
 
+.wireframe-blueprint-bg {
+  position: absolute;
+  inset: 0;
+  color: rgba(69, 179, 90, 0.06);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wireframe-blueprint-bg svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .wireframe-content {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .wireframe-text {
   max-width: 700px;
+}
+
+.wireframe-label {
+  color: var(--accent-color) !important;
+}
+
+.wireframe-title {
+  color: #ffffff;
+}
+
+.wireframe-desc {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.wireframe-section .feature-item h4 {
+  color: #ffffff;
+}
+
+.wireframe-section .feature-item p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.wireframe-section .feature-check {
+  background: var(--accent-color);
+  color: var(--yalton-green-dark);
+}
+
+.wireframe-polo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.wireframe-polo-svg {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  color: var(--accent-color);
+}
+
+.polo-line {
+  stroke: currentColor;
+}
+
+.polo-detail {
+  opacity: 0.5;
 }
 
 .feature-list {
@@ -1070,5 +1134,17 @@ main {
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .wireframe-content {
+    grid-template-columns: 1fr;
+  }
+
+  .wireframe-polo-container {
+    min-height: 280px;
+  }
+
+  .wireframe-polo-svg {
+    max-width: 260px;
   }
 }
