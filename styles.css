@@ -1264,18 +1264,19 @@ main {
 .contact-icon {
   width: 48px;
   height: 48px;
-  background: rgba(4, 82, 24, 0.1);
-  border-radius: 8px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(4, 82, 24, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--yalton-green);
   flex-shrink: 0;
+  background: rgba(4, 82, 24, 0.04);
 }
 
 .contact-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
 .contact-label {
