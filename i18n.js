@@ -113,7 +113,7 @@ const translations = {
 
     'cont.label': 'Contacto',
     'cont.title': 'Comencemos tu proyecto',
-    'cont.desc': 'Más de 35 años vistiendo a la industria mexicana con calidad y precisión.',
+    'cont.desc': 'Permite que Yalton Textil le dé a tus uniformes una proyección profesional y personalizada. Será un placer para nosotros poner a tu disposición nuestra experiencia y catálogo de servicios para la fabricación de uniformes a la medida de tus necesidades.',
     'cont.phone': 'Teléfono',
     'cont.location': 'Ubicación',
     'cont.address': 'República de Paraguay #412, Aguascalientes, México',
@@ -260,7 +260,7 @@ const translations = {
 
     'cont.label': 'Contact',
     'cont.title': 'Let\'s start your project',
-    'cont.desc': 'Over 35 years dressing Mexican industry with quality and precision.',
+    'cont.desc': 'Let Yalton Textil give your uniforms a professional and personalized projection. It will be our pleasure to put at your disposal our experience and catalog of services for the manufacture of uniforms tailored to your needs.',
     'cont.phone': 'Phone',
     'cont.location': 'Location',
     'cont.address': 'República de Paraguay #412, Aguascalientes, Mexico',
