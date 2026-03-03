@@ -1994,7 +1994,7 @@ a.contact-link:hover {
 
   .wireframe-3d-viewer {
     min-height: 500px;
-    order: -1;
+    order: 1;
   }
 
   .client-card {
