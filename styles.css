@@ -1383,19 +1383,19 @@ main {
   border-radius: 6px;
   font-weight: 600;
   font-size: 1rem;
-  background: rgba(4, 82, 24, 0.08);
-  color: var(--yalton-green);
-  border: 1px solid rgba(4, 82, 24, 0.2);
+  background: var(--yalton-green);
+  color: white;
+  border: 1px solid var(--yalton-green);
   text-decoration: none;
   transition: all 0.4s var(--ease);
   cursor: pointer;
 }
 
 .catalog-btn:hover {
-  background: rgba(4, 82, 24, 0.15);
-  border-color: var(--yalton-green);
+  background: linear-gradient(135deg, var(--yalton-green), var(--accent-color));
+  border-color: var(--accent-color);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(4, 82, 24, 0.15);
+  box-shadow: 0 8px 24px rgba(4, 82, 24, 0.4);
 }
 
 .contact-map {
