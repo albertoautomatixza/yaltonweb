@@ -19,17 +19,18 @@ export function initGridRoom() {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   const gridColor = new THREE.Color(0x45b35a);
+  const glowColor = new THREE.Color(0x66ff88);
 
   const gridMaterial = new THREE.LineBasicMaterial({
     color: gridColor,
     transparent: true,
-    opacity: 0.15,
+    opacity: 0.35,
   });
 
   const gridMaterialBright = new THREE.LineBasicMaterial({
-    color: gridColor,
+    color: glowColor,
     transparent: true,
-    opacity: 0.3,
+    opacity: 0.6,
   });
 
   function createGridPlane(width, height, divisionsW, divisionsH, majorEvery) {
@@ -43,16 +44,38 @@ export function initGridRoom() {
       const x = -hw + i * stepW;
       const pts = [new THREE.Vector3(x, 0, -hh), new THREE.Vector3(x, 0, hh)];
       const geom = new THREE.BufferGeometry().setFromPoints(pts);
-      const mat = i % majorEvery === 0 ? gridMaterialBright : gridMaterial;
+      const isMajor = i % majorEvery === 0;
+      const mat = isMajor ? gridMaterialBright : gridMaterial;
       group.add(new THREE.Line(geom, mat));
+
+      if (isMajor) {
+        const glowMat = new THREE.LineBasicMaterial({
+          color: glowColor,
+          transparent: true,
+          opacity: 0.12,
+          linewidth: 1,
+        });
+        group.add(new THREE.Line(geom.clone(), glowMat));
+      }
     }
 
     for (let j = 0; j <= divisionsH; j++) {
       const z = -hh + j * stepH;
       const pts = [new THREE.Vector3(-hw, 0, z), new THREE.Vector3(hw, 0, z)];
       const geom = new THREE.BufferGeometry().setFromPoints(pts);
-      const mat = j % majorEvery === 0 ? gridMaterialBright : gridMaterial;
+      const isMajor = j % majorEvery === 0;
+      const mat = isMajor ? gridMaterialBright : gridMaterial;
       group.add(new THREE.Line(geom, mat));
+
+      if (isMajor) {
+        const glowMat = new THREE.LineBasicMaterial({
+          color: glowColor,
+          transparent: true,
+          opacity: 0.12,
+          linewidth: 1,
+        });
+        group.add(new THREE.Line(geom.clone(), glowMat));
+      }
     }
 
     return group;
@@ -89,9 +112,8 @@ export function initGridRoom() {
   resize();
   window.addEventListener('resize', resize);
 
-  let raf;
   function animate() {
-    raf = requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
     renderer.render(scene, camera);
   }
   animate();
