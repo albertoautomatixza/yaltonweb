@@ -55,7 +55,8 @@ function updateAnnotationPositions(container, annData, modelCenter3D, modelHeigh
 
   annData.elements.forEach(({ dot, labelEl, line, ann }) => {
     const worldY = modelCenter3D.y - modelHeight3D / 2 + ann.bodyY * modelHeight3D;
-    const worldX = (ann.bodyX || 0) * modelHeight3D;
+    const bx = (ann.bodyX || 0) * (isMobile ? 0.5 : 1);
+    const worldX = bx * modelHeight3D;
     const pos3D = new THREE.Vector3(worldX, worldY, 0);
     pos3D.project(camera);
 
