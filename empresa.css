@@ -1,0 +1,335 @@
+.empresa-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 340px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.empresa-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.empresa-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.empresa-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.15) 100%);
+}
+
+.empresa-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+  width: 100%;
+}
+
+.empresa-hero-content .section-label {
+  display: inline-block;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.empresa-hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.empresa-about {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.empresa-about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.empresa-about-text p {
+  color: var(--gray-600);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+.empresa-about-text p:first-child::first-letter {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--yalton-green);
+  float: left;
+  line-height: 1;
+  margin-right: 0.5rem;
+  margin-top: 0.1rem;
+}
+
+.empresa-about-image {
+  position: sticky;
+  top: 100px;
+}
+
+.empresa-about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.empresa-mision-vision {
+  padding: 5rem 0;
+  background: var(--yalton-green);
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mv-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 2.5rem;
+  transition: transform 0.4s var(--ease), background 0.4s var(--ease);
+}
+
+.mv-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.mv-card h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.mv-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-color);
+}
+
+.mv-card p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.empresa-prefieren {
+  padding: 5rem 0;
+  background: var(--gray-100);
+}
+
+.prefieren-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--gray-800);
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.prefieren-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.prefieren-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.prefieren-icon-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid rgba(4, 82, 24, 0.15);
+  transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+
+.prefieren-item:hover .prefieren-icon-wrap {
+  transform: scale(1.08);
+  border-color: var(--yalton-green);
+}
+
+.prefieren-icon-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prefieren-item h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.prefieren-item p {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+.empresa-cta {
+  padding: 5rem 2.5rem;
+  background: var(--dark-bg);
+}
+
+.empresa-cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4rem 3rem;
+  border-radius: 16px;
+  border: 1px solid rgba(69, 179, 90, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.empresa-cta-inner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(4,82,24,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.empresa-cta-inner h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.empresa-cta-inner p {
+  color: var(--gray-400);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.empresa-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.empresa-cta-btn {
+  padding: 0.9rem 2.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.4s var(--ease);
+}
+
+.empresa-cta-btn-primary {
+  background: var(--yalton-green);
+  color: #fff;
+  border: 2px solid var(--yalton-green);
+}
+
+.empresa-cta-btn-primary:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(4, 82, 24, 0.4);
+}
+
+.empresa-cta-btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.empresa-cta-btn-secondary:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .empresa-about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .empresa-about-image {
+    position: static;
+  }
+
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prefieren-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .empresa-hero {
+    height: 40vh;
+    min-height: 280px;
+  }
+
+  .empresa-about {
+    padding: 3rem 0;
+  }
+
+  .empresa-mision-vision {
+    padding: 3rem 0;
+  }
+
+  .empresa-prefieren {
+    padding: 3rem 0;
+  }
+
+  .prefieren-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .empresa-cta-inner {
+    padding: 2.5rem 1.5rem;
+  }
+}

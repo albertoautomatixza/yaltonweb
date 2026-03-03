@@ -1846,6 +1846,11 @@ a.contact-link:hover {
   transform: translateY(0);
 }
 
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 .scroll-top-btn:hover {
   background: linear-gradient(135deg, var(--yalton-green), var(--accent-color));
   border-color: var(--accent-color);
