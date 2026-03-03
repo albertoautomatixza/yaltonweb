@@ -1446,11 +1446,13 @@ a.contact-link:hover {
 }
 
 .footer-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--yalton-green);
   margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
 .footer-brand p {
