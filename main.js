@@ -329,9 +329,24 @@ if (techItems.length) {
   }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
 
   techItems.forEach((item, index) => {
-    item.style.transitionDelay = `${index * 0.2}s`;
+    item.style.transitionDelay = `${index * 0.15}s`;
     techObserver.observe(item);
   });
+
+  function updateTechLines() {
+    techItems.forEach((item) => {
+      const lineFill = item.querySelector('.tech-item-line-fill');
+      if (!lineFill) return;
+      const rect = item.getBoundingClientRect();
+      const windowH = window.innerHeight;
+      const start = windowH * 0.85;
+      const end = windowH * 0.25;
+      const progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
+      lineFill.style.width = `${progress * 100}%`;
+    });
+    requestAnimationFrame(updateTechLines);
+  }
+  updateTechLines();
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
