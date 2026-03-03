@@ -334,20 +334,22 @@ if (techItems.length) {
   });
 
   const techSection = document.getElementById('tecnologia');
+  const barSpeeds = [1.0, 0.75, 0.55];
   function updateTechLines() {
     if (techSection) {
       const sectionRect = techSection.getBoundingClientRect();
       const windowH = window.innerHeight;
-      const enterStart = windowH;
-      const fillComplete = windowH * 0.15;
-      const sectionProgress = Math.min(Math.max((enterStart - sectionRect.top) / (enterStart - fillComplete), 0), 1);
+      const sectionProgress = Math.min(Math.max((windowH - sectionRect.top) / (windowH + sectionRect.height * 0.3), 0), 1);
 
       techItems.forEach((item, index) => {
         const lineFill = item.querySelector('.tech-item-line-fill');
+        const percentEl = item.querySelector('.tech-item-percent');
         if (!lineFill) return;
-        const delay = index * 0.05;
-        const itemProgress = Math.min(Math.max((sectionProgress - delay) / (1 - delay), 0), 1);
-        lineFill.style.width = `${itemProgress * 100}%`;
+        const speed = barSpeeds[index] || 0.5;
+        const itemProgress = Math.min(Math.max(sectionProgress * (1 / speed), 0), 1);
+        const pct = Math.round(itemProgress * 100);
+        lineFill.style.width = `${pct}%`;
+        if (percentEl) percentEl.textContent = `${pct}%`;
       });
     }
     requestAnimationFrame(updateTechLines);

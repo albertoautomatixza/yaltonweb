@@ -559,6 +559,12 @@ main {
   transform: translateY(0);
 }
 
+.tech-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .tech-item-label {
   font-size: 0.85rem;
   font-weight: 600;
@@ -567,6 +573,13 @@ main {
   letter-spacing: 0.08em;
   margin-bottom: 0.5rem;
   display: block;
+}
+
+.tech-item-percent {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--yalton-green);
+  font-variant-numeric: tabular-nums;
 }
 
 .tech-item-line {
