@@ -133,6 +133,15 @@ function onScroll() {
     }
   }
 
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (scrollTopBtn) {
+    if (scrollTop > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  }
+
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   scrollProgress = scrollTop / docHeight;
 
@@ -318,6 +327,13 @@ if (document.readyState === 'loading') {
   initI18n();
   initTextRotator();
   initGridRoom();
+}
+
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
 const techItems = document.querySelectorAll('[data-tech-item]');

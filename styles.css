@@ -1681,3 +1681,43 @@ a.contact-link:hover {
   }
 
 }
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background: rgba(20, 32, 40, 0.85);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s var(--ease);
+  z-index: 999;
+  backdrop-filter: blur(8px);
+}
+
+.scroll-top-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background: linear-gradient(135deg, var(--yalton-green), var(--accent-color));
+  border-color: var(--accent-color);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(4, 82, 24, 0.4);
+}
