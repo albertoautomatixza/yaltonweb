@@ -2008,9 +2008,12 @@ a.contact-link:hover {
   }
 
   .worker-ann-label {
-    font-size: 0.45rem;
-    padding: 0.1rem 0.3rem;
-    letter-spacing: 0.02em;
+    font-size: 0.42rem;
+    padding: 0.1rem 0.25rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .client-card {

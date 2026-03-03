@@ -68,11 +68,15 @@ function updateAnnotationPositions(container, annData, modelCenter3D, modelHeigh
 
     labelEl.style.top = screenY + 'px';
     if (ann.side === 'right') {
-      labelEl.style.left = (screenX + labelGap) + 'px';
+      const leftPos = screenX + labelGap;
+      labelEl.style.left = Math.min(leftPos, w - 4) + 'px';
       labelEl.style.right = 'auto';
+      if (isMobile) labelEl.style.maxWidth = Math.max(w - leftPos - 4, 60) + 'px';
     } else {
-      labelEl.style.right = (w - screenX + labelGap) + 'px';
+      const rightPos = w - screenX + labelGap;
+      labelEl.style.right = Math.min(rightPos, w - 4) + 'px';
       labelEl.style.left = 'auto';
+      if (isMobile) labelEl.style.maxWidth = Math.max(w - rightPos - 4, 60) + 'px';
     }
 
     const endX = ann.side === 'right' ? screenX + lineLen : screenX - lineLen;
