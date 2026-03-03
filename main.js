@@ -23,12 +23,33 @@ function onScroll() {
   }
 }
 
+function initHamburger() {
+  const hamburger = document.querySelector('.nav-hamburger');
+  const navRight = document.querySelector('.nav-right');
+  if (!hamburger || !navRight) return;
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navRight.classList.toggle('mobile-open');
+    document.body.style.overflow = navRight.classList.contains('mobile-open') ? 'hidden' : '';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navRight.contains(e.target)) {
+      hamburger.classList.remove('active');
+      navRight.classList.remove('mobile-open');
+      document.body.style.overflow = '';
+    }
+  });
+}
+
 function initApp() {
   window.addEventListener('scroll', onScroll);
   initI18n();
   initTextRotator();
   initGridRoom();
   initModals();
+  initHamburger();
 }
 
 function initModals() {
