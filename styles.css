@@ -494,11 +494,10 @@ main {
 }
 
 .wireframe-section {
-  padding: 6rem 2rem 7rem;
+  padding: 5rem 2rem 6rem;
   background: var(--yalton-green-dark);
   position: relative;
   overflow: hidden;
-  min-height: 80vh;
 }
 
 .contact-section {
@@ -626,7 +625,9 @@ main {
   pointer-events: none;
   z-index: 0;
   display: block;
-  background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(4, 82, 24, 0.06) 0%, transparent 70%);
+  opacity: 0.5;
+  -webkit-mask-image: radial-gradient(ellipse 70% 65% at 55% 50%, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 75%);
+  mask-image: radial-gradient(ellipse 70% 65% at 55% 50%, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 75%);
 }
 
 .wireframe-content {
@@ -671,16 +672,22 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 550px;
-  position: relative;
+  min-height: 400px;
 }
 
-#uniform-wireframe-canvas {
+.wireframe-polo-svg {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-  display: block;
+  max-width: 360px;
+  height: auto;
+  color: var(--accent-color);
+}
+
+.polo-line {
+  stroke: currentColor;
+}
+
+.polo-detail {
+  opacity: 0.5;
 }
 
 .feature-list {
@@ -1131,6 +1138,10 @@ main {
   }
 
   .wireframe-polo-container {
-    min-height: 400px;
+    min-height: 280px;
+  }
+
+  .wireframe-polo-svg {
+    max-width: 260px;
   }
 }
