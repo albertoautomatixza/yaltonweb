@@ -624,18 +624,55 @@ main {
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  overflow: hidden;
+}
+
+.grid-room {
+  position: absolute;
+  inset: 0;
+  perspective: 600px;
+  perspective-origin: 60% 45%;
+}
+
+.grid-wall {
+  position: absolute;
   background-image:
-    linear-gradient(rgba(69, 179, 90, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(69, 179, 90, 0.1) 1px, transparent 1px),
-    linear-gradient(rgba(69, 179, 90, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(69, 179, 90, 0.04) 1px, transparent 1px);
-  background-size:
-    120px 120px,
-    120px 120px,
-    24px 24px,
-    24px 24px;
-  -webkit-mask-image: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 35%, rgba(0,0,0,0) 65%);
-  mask-image: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 35%, rgba(0,0,0,0) 65%);
+    linear-gradient(rgba(69, 179, 90, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69, 179, 90, 0.18) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.grid-back {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateZ(-300px);
+  opacity: 0.25;
+}
+
+.grid-floor {
+  width: 100%;
+  height: 120%;
+  bottom: -20%;
+  left: 0;
+  transform-origin: bottom center;
+  transform: rotateX(60deg);
+  opacity: 0.2;
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%);
+  mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%);
+}
+
+.grid-left {
+  width: 120%;
+  height: 100%;
+  top: 0;
+  right: -20%;
+  transform-origin: right center;
+  transform: rotateY(60deg);
+  opacity: 0.18;
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 60%);
+  mask-image: linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 60%);
 }
 
 .wireframe-content {
