@@ -333,17 +333,21 @@ if (techItems.length) {
     techObserver.observe(item);
   });
 
+  const techSection = document.getElementById('tecnologia');
   function updateTechLines() {
-    techItems.forEach((item) => {
-      const lineFill = item.querySelector('.tech-item-line-fill');
-      if (!lineFill) return;
-      const rect = item.getBoundingClientRect();
+    if (techSection) {
+      const sectionRect = techSection.getBoundingClientRect();
       const windowH = window.innerHeight;
-      const start = windowH * 0.85;
-      const end = windowH * 0.25;
-      const progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
-      lineFill.style.width = `${progress * 100}%`;
-    });
+      const sectionProgress = Math.min(Math.max((windowH - sectionRect.top) / (windowH + sectionRect.height), 0), 1);
+
+      techItems.forEach((item, index) => {
+        const lineFill = item.querySelector('.tech-item-line-fill');
+        if (!lineFill) return;
+        const offset = index * 0.08;
+        const itemProgress = Math.min(Math.max((sectionProgress - offset) / (0.7 - offset), 0), 1);
+        lineFill.style.width = `${itemProgress * 100}%`;
+      });
+    }
     requestAnimationFrame(updateTechLines);
   }
   updateTechLines();

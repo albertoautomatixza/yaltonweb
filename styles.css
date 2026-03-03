@@ -583,7 +583,7 @@ main {
   left: 0;
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--yalton-green), var(--accent-color));
+  background: linear-gradient(90deg, var(--accent-color), var(--yalton-green));
   transition: none;
 }
 
