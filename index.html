@@ -33,8 +33,6 @@
     </div>
   </nav>
 
-  <div id="canvas-container"></div>
-
   <main>
     <section id="inicio" class="hero-section">
       <div class="hero-bg">
@@ -605,43 +603,72 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo"><img src="/YALTON_GLOBAL.png" alt="Yalton Global Marketer"></div>
-          <p data-i18n="foot.brand">35+ años vistiendo la industria mexicana con calidad, precisión e innovación.</p>
+          <p data-i18n="foot.brand">35+ anos vistiendo la industria mexicana con calidad, precision e innovacion.</p>
         </div>
 
-        <div class="footer-links">
-          <h4 data-i18n="foot.empresa">Empresa</h4>
-          <a href="#inicio" data-i18n="foot.inicio">Inicio</a>
-          <a href="#tecnologia" data-i18n="foot.tecnologia">Tecnología</a>
-          <a href="#servicios" data-i18n="foot.servicios">Servicios</a>
-          <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
-        </div>
-
-        <div class="footer-links">
-          <h4 data-i18n="foot.serviciosH">Servicios</h4>
-          <a href="#" data-i18n="foot.s1">Uniformes Industriales</a>
-          <a href="#" data-i18n="foot.s2">Diseño Personalizado</a>
-          <a href="#" data-i18n="foot.s3">Bordado y Serigrafía</a>
-          <a href="#" data-i18n="foot.s4">Pedidos en Línea</a>
-        </div>
-
-        <div class="footer-links">
-          <h4 data-i18n="foot.sectores">Sectores</h4>
-          <a href="#" data-i18n="foot.auto">Automotriz</a>
-          <a href="#" data-i18n="foot.energia">Energía</a>
-          <a href="#" data-i18n="foot.logistica">Logística</a>
-          <a href="#" data-i18n="foot.construccion">Construcción</a>
+        <div class="footer-nav">
+          <a href="#inicio" class="footer-nav-link" data-i18n="nav.empresa">Empresa</a>
+          <a href="#tecnologia" class="footer-nav-link" data-i18n="nav.catalogo">Catalogo</a>
+          <a href="#servicios" class="footer-nav-link" data-i18n="nav.oportunidades">Oportunidades</a>
+          <a href="#proceso" class="footer-nav-link" data-i18n="nav.proceso">Proceso</a>
+          <a href="#clientes" class="footer-nav-link" data-i18n="nav.clientes">Clientes</a>
+          <a href="#contacto" class="footer-nav-link" data-i18n="nav.contacto">Contacto</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p data-i18n="foot.copy">&copy; 2024 Yalton Textil. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Yalton Global Marketer S.A. de C.V. Todos los derechos reservados - Creado por <a href="https://wa.me/524491809587" target="_blank" rel="noopener noreferrer" class="footer-credit-link">Albertoautomatiza</a></p>
         <div class="footer-legal">
-          <a href="#" data-i18n="foot.privacy">Privacidad</a>
-          <a href="#" data-i18n="foot.terms">Términos</a>
+          <button type="button" class="footer-legal-btn" id="openPrivacy">Privacidad</button>
+          <button type="button" class="footer-legal-btn" id="openTerms">Terminos</button>
         </div>
       </div>
     </div>
   </footer>
+
+  <div class="modal-overlay" id="privacyModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closePrivacy">&times;</button>
+      <h2>Aviso de Privacidad</h2>
+      <div class="modal-body">
+        <p>Yalton Global Marketer S.A. de C.V., con domicilio en Republica de Paraguay 412, Aguascalientes, Mexico, es responsable del tratamiento de sus datos personales.</p>
+        <h3>Datos que recopilamos</h3>
+        <p>Recopilamos los siguientes datos personales: nombre completo, correo electronico, numero telefonico, empresa, estado y mensaje cuando usted nos contacta a traves de nuestro formulario.</p>
+        <h3>Finalidades del tratamiento</h3>
+        <p>Sus datos personales seran utilizados para: responder a sus solicitudes de cotizacion, brindar informacion sobre nuestros productos y servicios, dar seguimiento a pedidos y mantener comunicacion comercial.</p>
+        <h3>Proteccion de datos</h3>
+        <p>Implementamos medidas de seguridad administrativas, tecnicas y fisicas para proteger sus datos personales contra dano, perdida, alteracion, destruccion o uso no autorizado.</p>
+        <h3>Derechos ARCO</h3>
+        <p>Usted tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales (Derechos ARCO). Para ejercer estos derechos, puede contactarnos a traves de nuestros canales oficiales.</p>
+        <h3>Cambios al aviso de privacidad</h3>
+        <p>Nos reservamos el derecho de efectuar modificaciones o actualizaciones al presente aviso de privacidad. Cualquier cambio sera publicado en nuestro sitio web.</p>
+        <p><strong>Ultima actualizacion: Marzo 2026</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="termsModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeTerms">&times;</button>
+      <h2>Terminos y Condiciones</h2>
+      <div class="modal-body">
+        <p>Bienvenido al sitio web de Yalton Global Marketer S.A. de C.V. Al acceder y utilizar este sitio, usted acepta los siguientes terminos y condiciones.</p>
+        <h3>1. Uso del sitio</h3>
+        <p>Este sitio web es para uso informativo y comercial. Todo el contenido, incluyendo textos, imagenes, logotipos y disenos, es propiedad de Yalton Global Marketer S.A. de C.V. y esta protegido por las leyes de propiedad intelectual aplicables.</p>
+        <h3>2. Cotizaciones</h3>
+        <p>Las cotizaciones solicitadas a traves de este sitio son informativas y no constituyen un contrato vinculante. Los precios, disponibilidad y tiempos de entrega estan sujetos a confirmacion por parte de nuestro equipo comercial.</p>
+        <h3>3. Productos y servicios</h3>
+        <p>Nos esforzamos por presentar informacion precisa sobre nuestros productos y servicios. Sin embargo, nos reservamos el derecho de modificar especificaciones, precios y disponibilidad sin previo aviso.</p>
+        <h3>4. Responsabilidad</h3>
+        <p>Yalton Global Marketer S.A. de C.V. no sera responsable por danos directos o indirectos derivados del uso de este sitio web o de la imposibilidad de acceder al mismo.</p>
+        <h3>5. Propiedad intelectual</h3>
+        <p>Todas las marcas, logotipos, nombres comerciales y disenos mostrados en este sitio son propiedad de Yalton Global Marketer S.A. de C.V. Queda prohibida su reproduccion sin autorizacion previa por escrito.</p>
+        <h3>6. Legislacion aplicable</h3>
+        <p>Estos terminos y condiciones se rigen por las leyes vigentes en los Estados Unidos Mexicanos. Cualquier controversia sera sometida a los tribunales competentes de Aguascalientes, Mexico.</p>
+        <p><strong>Ultima actualizacion: Marzo 2026</strong></p>
+      </div>
+    </div>
+  </div>
 
   <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
