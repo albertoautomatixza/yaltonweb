@@ -50,12 +50,12 @@ function updateAnnotationPositions(container, annData, modelCenter3D, modelHeigh
   const h = rect.height;
 
   const isMobile = w < 768;
-  const lineLen = isMobile ? 20 : 38;
-  const labelGap = isMobile ? 22 : 40;
+  const lineLen = isMobile ? 14 : 38;
+  const labelGap = isMobile ? 16 : 40;
 
   annData.elements.forEach(({ dot, labelEl, line, ann }) => {
     const worldY = modelCenter3D.y - modelHeight3D / 2 + ann.bodyY * modelHeight3D;
-    const bx = (ann.bodyX || 0) * (isMobile ? 0.5 : 1);
+    const bx = (ann.bodyX || 0) * (isMobile ? 0.3 : 1);
     const worldX = bx * modelHeight3D;
     const pos3D = new THREE.Vector3(worldX, worldY, 0);
     pos3D.project(camera);

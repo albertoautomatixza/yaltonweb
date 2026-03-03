@@ -1999,18 +1999,18 @@ a.contact-link:hover {
   }
 
   .worker-ann-dot {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
   }
 
   .worker-ann-dot::after {
-    inset: -3px;
+    inset: -2px;
   }
 
   .worker-ann-label {
-    font-size: 0.55rem;
-    padding: 0.15rem 0.4rem;
-    letter-spacing: 0.03em;
+    font-size: 0.45rem;
+    padding: 0.1rem 0.3rem;
+    letter-spacing: 0.02em;
   }
 
   .client-card {
