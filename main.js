@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { initI18n } from './i18n.js';
 import { initTextRotator } from './text-rotator.js';
-import { initGridRoom } from './grid-room.js';
+import { initUniformWireframe } from './uniform-wireframe.js';
 
 let scene, camera, renderer, poloShirt;
 let wireframeVersion;
@@ -311,7 +311,7 @@ if (document.readyState === 'loading') {
     init();
     initI18n();
     initTextRotator();
-    initGridRoom();
+    initUniformWireframe();
   });
 } else {
   init();
@@ -369,20 +369,6 @@ if (techItems.length) {
   updateTechLines();
 }
 
-const wireframeSection = document.getElementById('wireframe');
-const poloClipRect = document.getElementById('poloClipRect');
-if (wireframeSection && poloClipRect) {
-  function updatePoloReveal() {
-    const rect = wireframeSection.getBoundingClientRect();
-    const wh = window.innerHeight;
-    const raw = (wh - rect.top) / (wh + rect.height * 0.4);
-    const progress = Math.min(Math.max(raw, 0), 1);
-    const revealWidth = progress * 400;
-    poloClipRect.setAttribute('width', String(revealWidth));
-    requestAnimationFrame(updatePoloReveal);
-  }
-  updatePoloReveal();
-}
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
