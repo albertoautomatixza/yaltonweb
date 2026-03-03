@@ -1815,7 +1815,7 @@ a.contact-link:hover {
 
 .scroll-top-btn {
   position: fixed;
-  bottom: 2rem;
+  bottom: 5.75rem;
   right: 2rem;
   width: 48px;
   height: 48px;
@@ -1856,4 +1856,33 @@ a.contact-link:hover {
   border-color: var(--accent-color);
   color: #ffffff;
   box-shadow: 0 4px 16px rgba(4, 82, 24, 0.4);
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  transition: all 0.3s var(--ease);
+  z-index: 999;
+}
+
+.whatsapp-btn svg {
+  width: 26px;
+  height: 26px;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px);
 }
