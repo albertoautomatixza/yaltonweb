@@ -32,10 +32,10 @@ function createAnnotationElements(container) {
     overlay.appendChild(labelEl);
 
     const line = document.createElementNS(svgNS, 'line');
-    line.setAttribute('stroke', '#45b35a');
+    line.setAttribute('stroke', '#ffffff');
     line.setAttribute('stroke-width', '1');
     line.setAttribute('stroke-dasharray', '4 3');
-    line.setAttribute('opacity', '0.7');
+    line.setAttribute('opacity', '0.85');
     svg.appendChild(line);
 
     return { dot, labelEl, line, ann };

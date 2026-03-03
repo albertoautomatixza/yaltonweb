@@ -941,10 +941,10 @@ main {
   position: absolute;
   width: 8px;
   height: 8px;
-  background: var(--accent-color);
+  background: #ffffff;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 8px rgba(69, 179, 90, 0.6);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
   z-index: 3;
 }
 
@@ -952,7 +952,7 @@ main {
   content: '';
   position: absolute;
   inset: -4px;
-  border: 1px solid rgba(69, 179, 90, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   animation: annPulse 2s ease-in-out infinite;
 }
@@ -972,8 +972,8 @@ main {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 0.25rem 0.6rem;
-  background: rgba(69, 179, 90, 0.12);
-  border: 1px solid rgba(69, 179, 90, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 4px;
   z-index: 3;
   opacity: 0;
