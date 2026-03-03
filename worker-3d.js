@@ -2,12 +2,12 @@ import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 
 const ANNOTATIONS = [
-  { key: 'casco', label: 'Casco de Seguridad', bodyY: 0.95, side: 'right' },
-  { key: 'logo', label: 'Logo Bordado', bodyY: 0.72, side: 'left' },
-  { key: 'bandas', label: 'Bandas Reflectantes', bodyY: 0.58, side: 'right' },
-  { key: 'bolsillos', label: 'Bolsillos Reforzados', bodyY: 0.42, side: 'left' },
-  { key: 'rodilleras', label: 'Rodilleras Integradas', bodyY: 0.22, side: 'right' },
-  { key: 'botas', label: 'Botas Industriales', bodyY: 0.05, side: 'left' },
+  { key: 'logo', label: 'Logo Bordado', bodyY: 0.75, side: 'left' },
+  { key: 'tela', label: 'Tela Antifluido', bodyY: 0.63, side: 'right' },
+  { key: 'franjas', label: 'Franjas Reflejantes', bodyY: 0.52, side: 'left' },
+  { key: 'bolsillos', label: 'Bolsillos Reforzados', bodyY: 0.42, side: 'right' },
+  { key: 'costuras', label: 'Costuras Triple Puntada', bodyY: 0.30, side: 'left' },
+  { key: 'rodilleras', label: 'Rodilleras Integradas', bodyY: 0.20, side: 'right' },
 ];
 
 function createAnnotationElements(container) {
