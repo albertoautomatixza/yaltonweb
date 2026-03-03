@@ -290,29 +290,87 @@
           <span class="section-label" data-i18n="proc.label">Nuestro Proceso</span>
           <h2 class="section-title" data-i18n="proc.title">De la idea al uniforme</h2>
         </div>
-        <div class="process-timeline">
-          <div class="process-step">
-            <div class="process-number">01</div>
-            <h3 data-i18n="proc.s1.t">Consultoría</h3>
-            <p data-i18n="proc.s1.d">Análisis de necesidades específicas de tu industria</p>
-          </div>
-          <div class="process-connector"></div>
-          <div class="process-step">
-            <div class="process-number">02</div>
-            <h3 data-i18n="proc.s2.t">Diseño</h3>
-            <p data-i18n="proc.s2.d">Creación de prototipos digitales y físicos</p>
-          </div>
-          <div class="process-connector"></div>
-          <div class="process-step">
-            <div class="process-number">03</div>
-            <h3 data-i18n="proc.s3.t">Producción</h3>
-            <p data-i18n="proc.s3.d">Manufactura con control de calidad continuo</p>
-          </div>
-          <div class="process-connector"></div>
-          <div class="process-step">
-            <div class="process-number">04</div>
-            <h3 data-i18n="proc.s4.t">Entrega</h3>
-            <p data-i18n="proc.s4.d">Logística puntual y servicio post-venta</p>
+        <div class="process-circle-wrapper">
+          <div class="process-circle-container">
+            <svg class="process-ring" viewBox="0 0 400 400">
+              <defs>
+                <linearGradient id="ring-gradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="400" y2="400">
+                  <stop offset="0%" stop-color="#045218"/>
+                  <stop offset="25%" stop-color="#45b35a"/>
+                  <stop offset="50%" stop-color="#056b20"/>
+                  <stop offset="75%" stop-color="#45b35a"/>
+                  <stop offset="100%" stop-color="#045218"/>
+                </linearGradient>
+                <mask id="ring-mask">
+                  <circle cx="200" cy="200" r="170" fill="none" stroke="white" stroke-width="3" stroke-dasharray="8 6"/>
+                </mask>
+              </defs>
+              <circle cx="200" cy="200" r="170" fill="none" stroke="rgba(69,179,90,0.08)" stroke-width="2"/>
+              <circle class="process-ring-animated" cx="200" cy="200" r="170" fill="none" stroke="url(#ring-gradient)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+
+            <div class="process-center-text">
+              <span class="process-center-number">4</span>
+              <span class="process-center-label" data-i18n="proc.steps">Pasos</span>
+            </div>
+
+            <div class="process-node process-node-top">
+              <div class="process-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                </svg>
+              </div>
+              <div class="process-node-content">
+                <span class="process-node-number">01</span>
+                <h3 data-i18n="proc.s1.t">Consultoría</h3>
+                <p data-i18n="proc.s1.d">Análisis de necesidades específicas de tu industria</p>
+              </div>
+            </div>
+
+            <div class="process-node process-node-right">
+              <div class="process-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                  <path d="M2 2l7.586 7.586"/>
+                  <circle cx="11" cy="11" r="2"/>
+                </svg>
+              </div>
+              <div class="process-node-content">
+                <span class="process-node-number">02</span>
+                <h3 data-i18n="proc.s2.t">Diseño</h3>
+                <p data-i18n="proc.s2.d">Creación de prototipos digitales y físicos</p>
+              </div>
+            </div>
+
+            <div class="process-node process-node-bottom">
+              <div class="process-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <div class="process-node-content">
+                <span class="process-node-number">03</span>
+                <h3 data-i18n="proc.s3.t">Producción</h3>
+                <p data-i18n="proc.s3.d">Manufactura con control de calidad continuo</p>
+              </div>
+            </div>
+
+            <div class="process-node process-node-left">
+              <div class="process-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="3" width="15" height="13"/>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                  <circle cx="5.5" cy="18.5" r="2.5"/>
+                  <circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              </div>
+              <div class="process-node-content">
+                <span class="process-node-number">04</span>
+                <h3 data-i18n="proc.s4.t">Entrega</h3>
+                <p data-i18n="proc.s4.d">Logística puntual y servicio post-venta</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
