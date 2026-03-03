@@ -73,7 +73,7 @@ const translations = {
     'cta.label': 'Inicia Tu Proyecto',
     'cta.title': 'Tienes un reto que podamos ',
     'cta.highlight': 'resolver',
-    'cta.desc': 'Cuentanos sobre tu proyecto -- nuestros ingenieros evaluaran tus necesidades y te presentaran una propuesta concreta en menos de 48 horas.',
+    'cta.desc': 'Cuentanos sobre tu proyecto, nuestros agentes evaluaran tus necesidades y te presentaran una propuesta concreta en menos de 48 horas.',
     'cta.btn1': 'Solicitar Cotizacion',
     'cta.btn2': 'Conocenos',
 
@@ -195,7 +195,7 @@ const translations = {
     'cta.label': 'Start Your Project',
     'cta.title': 'Have a challenge we can ',
     'cta.highlight': 'solve',
-    'cta.desc': 'Tell us about your project -- our engineers will assess your needs and come back with a concrete proposal within 48 hours.',
+    'cta.desc': 'Tell us about your project, our agents will assess your needs and come back with a concrete proposal within 48 hours.',
     'cta.btn1': 'Get A Quote',
     'cta.btn2': 'About Us',
 
