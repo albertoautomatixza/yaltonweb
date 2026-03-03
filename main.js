@@ -317,7 +317,7 @@ if (document.readyState === 'loading') {
   init();
   initI18n();
   initTextRotator();
-  initGridRoom();
+  initUniformWireframe();
 }
 
 const techItems = document.querySelectorAll('[data-tech-item]');
