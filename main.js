@@ -378,6 +378,15 @@ document.querySelectorAll('.service-card[data-hover-img]').forEach(card => {
   }
 });
 
+const carouselTrack = document.querySelector('.clients-carousel-track');
+if (carouselTrack) {
+  const cards = Array.from(carouselTrack.children);
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    carouselTrack.appendChild(clone);
+  });
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
