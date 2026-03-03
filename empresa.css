@@ -179,21 +179,37 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  overflow: hidden;
   flex-shrink: 0;
-  border: 3px solid rgba(4, 82, 24, 0.15);
-  transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
+  position: relative;
+  transition: transform 0.4s var(--ease);
+}
+
+.prefieren-icon-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(var(--yalton-green), var(--accent-color), var(--yalton-green-light), var(--accent-color), var(--yalton-green));
+  animation: spinBorder 3s linear infinite;
+}
+
+.prefieren-icon-wrap img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@keyframes spinBorder {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .prefieren-item:hover .prefieren-icon-wrap {
   transform: scale(1.08);
-  border-color: var(--yalton-green);
-}
-
-.prefieren-icon-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .prefieren-item h4 {
