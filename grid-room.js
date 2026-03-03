@@ -24,13 +24,13 @@ export function initGridRoom() {
   const gridMaterial = new THREE.LineBasicMaterial({
     color: gridColor,
     transparent: true,
-    opacity: 0.35,
+    opacity: 0.12,
   });
 
   const gridMaterialBright = new THREE.LineBasicMaterial({
     color: glowColor,
     transparent: true,
-    opacity: 0.6,
+    opacity: 0.22,
   });
 
   function createGridPlane(width, height, divisionsW, divisionsH, majorEvery) {
@@ -52,7 +52,7 @@ export function initGridRoom() {
         const glowMat = new THREE.LineBasicMaterial({
           color: glowColor,
           transparent: true,
-          opacity: 0.12,
+          opacity: 0.06,
           linewidth: 1,
         });
         group.add(new THREE.Line(geom.clone(), glowMat));
@@ -71,7 +71,7 @@ export function initGridRoom() {
         const glowMat = new THREE.LineBasicMaterial({
           color: glowColor,
           transparent: true,
-          opacity: 0.12,
+          opacity: 0.06,
           linewidth: 1,
         });
         group.add(new THREE.Line(geom.clone(), glowMat));
