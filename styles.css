@@ -573,30 +573,30 @@ main {
 }
 
 .cta-banner-btn-primary {
-  background: var(--accent-color);
-  color: var(--yalton-green-dark);
-  border: 1px solid var(--accent-color);
-  box-shadow: 0 0 20px rgba(69, 179, 90, 0.25);
+  background: var(--yalton-green);
+  color: #ffffff;
+  border: 1px solid var(--yalton-green);
 }
 
 .cta-banner-btn-primary:hover {
-  background: linear-gradient(135deg, var(--accent-color), #5dd672);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(69, 179, 90, 0.45), 0 0 40px rgba(69, 179, 90, 0.2);
+  background: linear-gradient(135deg, var(--yalton-green), var(--accent-color));
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(4, 82, 24, 0.4);
 }
 
 .cta-banner-btn-secondary {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .cta-banner-btn-secondary:hover {
   background: linear-gradient(135deg, var(--yalton-green), var(--accent-color));
   border-color: var(--accent-color);
   color: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(4, 82, 24, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(4, 82, 24, 0.4);
 }
 
 .process-section {
