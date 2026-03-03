@@ -745,12 +745,15 @@ main {
   opacity: 1;
 }
 
-.service-card .service-card-top-line,
 .service-card .service-icon,
 .service-card h3,
 .service-card p {
   position: relative;
   z-index: 1;
+}
+
+.service-card .service-card-top-line {
+  z-index: 2;
 }
 
 .service-card-top-line {
