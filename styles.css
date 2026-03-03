@@ -562,7 +562,7 @@ main {
 .tech-item-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
 }
 
 .tech-item-label {
@@ -576,10 +576,12 @@ main {
 }
 
 .tech-item-percent {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: var(--yalton-green);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-variant-numeric: tabular-nums;
+  line-height: 1;
 }
 
 .tech-item-line {
