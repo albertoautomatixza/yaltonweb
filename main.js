@@ -49,7 +49,11 @@ function initApp() {
   initI18n();
   initTextRotator();
   initGridRoom();
-  initWireframeUniform();
+  try {
+    initWireframeUniform();
+  } catch (error) {
+    console.error('Wireframe uniform initialization failed:', error);
+  }
   initModals();
   initHamburger();
 }
