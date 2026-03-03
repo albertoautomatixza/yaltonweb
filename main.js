@@ -1,6 +1,7 @@
 import { initI18n } from './i18n.js';
 import { initTextRotator } from './text-rotator.js';
 import { initGridRoom } from './grid-room.js';
+import { initWireframeUniform } from './wireframe-uniform.js';
 
 function onScroll() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -48,6 +49,11 @@ function initApp() {
   initI18n();
   initTextRotator();
   initGridRoom();
+  try {
+    initWireframeUniform();
+  } catch (error) {
+    console.error('Wireframe uniform initialization failed:', error);
+  }
   initModals();
   initHamburger();
 }
