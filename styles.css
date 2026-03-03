@@ -1787,6 +1787,10 @@ a.contact-link:hover {
     justify-content: center;
   }
 
+  .scroll-indicator {
+    display: none;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
