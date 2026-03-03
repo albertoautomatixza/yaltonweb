@@ -70,6 +70,13 @@ const translations = {
     'serv.c9.t': 'Tecnologia de Punta',
     'serv.c9.d': 'Utilizamos la mas alta tecnologia en maquinaria y procesos de manufactura para garantizar acabados de precision y calidad superior en cada prenda.',
 
+    'cta.label': 'Inicia Tu Proyecto',
+    'cta.title': 'Tienes un reto que podamos ',
+    'cta.highlight': 'resolver',
+    'cta.desc': 'Cuentanos sobre tu proyecto -- nuestros ingenieros evaluaran tus necesidades y te presentaran una propuesta concreta en menos de 48 horas.',
+    'cta.btn1': 'Solicitar Cotizacion',
+    'cta.btn2': 'Conocenos',
+
     'proc.label': 'Nuestro Proceso',
     'proc.title': 'De la idea al uniforme',
     'proc.s1.t': 'Consultoría',
@@ -184,6 +191,13 @@ const translations = {
     'serv.c8.d': 'Once you work with us, you will be assigned a user number and password so you can place your orders online in a shopping cart format.',
     'serv.c9.t': 'Cutting-Edge Technology',
     'serv.c9.d': 'We use the most advanced machinery and manufacturing processes to guarantee precision finishes and superior quality in every garment.',
+
+    'cta.label': 'Start Your Project',
+    'cta.title': 'Have a challenge we can ',
+    'cta.highlight': 'solve',
+    'cta.desc': 'Tell us about your project -- our engineers will assess your needs and come back with a concrete proposal within 48 hours.',
+    'cta.btn1': 'Get A Quote',
+    'cta.btn2': 'About Us',
 
     'proc.label': 'Our Process',
     'proc.title': 'From idea to uniform',
