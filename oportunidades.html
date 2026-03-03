@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yalton - Oportunidades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="oportunidades.css">
+</head>
+<body>
+  <nav class="navbar scrolled">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><img src="/YALTON_GLOBAL.png" alt="Yalton" class="nav-logo-img"></a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="/empresa.html">Empresa</a>
+          <a href="https://yaltontextil.com/assets/pdf/Catalogo%20Yalton%202024.pdf" target="_blank" rel="noopener noreferrer">Catalogo</a>
+          <a href="/oportunidades.html" class="active">Oportunidades</a>
+          <a href="/#proceso">Proceso</a>
+          <a href="/#clientes">Clientes</a>
+          <a href="/#contacto">Contacto</a>
+        </div>
+        <button class="nav-cta" onclick="window.location.href='/#contacto'">Cotizar</button>
+      </div>
+      <button class="nav-hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="oport-slider">
+      <div class="oport-slider-track">
+        <div class="oport-slide active">
+          <img src="https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" alt="Uniformes industriales">
+          <div class="oport-slide-overlay"></div>
+          <div class="oport-slide-content">
+            <span class="oport-slide-label">Nuevos Productos</span>
+            <h2>Uniformes Industriales de Alta Calidad</h2>
+            <p>Descubre nuestra linea completa de ropa industrial con los mejores materiales y acabados del mercado.</p>
+          </div>
+        </div>
+        <div class="oport-slide">
+          <img src="https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" alt="Telas premium">
+          <div class="oport-slide-overlay"></div>
+          <div class="oport-slide-content">
+            <span class="oport-slide-label">Telas Premium</span>
+            <h2>Materiales de Ultima Generacion</h2>
+            <p>Telas ignifugas, antiestaticas, impermeables y mucho mas para cada necesidad industrial.</p>
+          </div>
+        </div>
+        <div class="oport-slide">
+          <img src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" alt="Entregas personalizadas">
+          <div class="oport-slide-overlay"></div>
+          <div class="oport-slide-content">
+            <span class="oport-slide-label">Ofertas Especiales</span>
+            <h2>Precios Competitivos en Volumen</h2>
+            <p>Consulta nuestros precios especiales para pedidos mayoristas y entregas personalizadas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="oport-slider-dots">
+        <button class="oport-dot active" data-slide="0"></button>
+        <button class="oport-dot" data-slide="1"></button>
+        <button class="oport-dot" data-slide="2"></button>
+      </div>
+      <button class="oport-slider-arrow oport-slider-prev" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="oport-slider-arrow oport-slider-next" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </section>
+
+    <section class="oport-products">
+      <div class="section-container">
+        <div class="oport-products-header">
+          <span class="section-label">Catalogo de Productos</span>
+          <h2 class="section-title">Nuestros Productos</h2>
+        </div>
+        <div class="oport-grid">
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/6764007/pexels-photo-6764007.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Camisa Industrial Oxford">
+            </div>
+            <div class="oport-card-body">
+              <h3>Camisa Industrial Oxford</h3>
+              <div class="oport-stars" data-rating="5">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/4210860/pexels-photo-4210860.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Pantalon Cargo Reforzado">
+            </div>
+            <div class="oport-card-body">
+              <h3>Pantalon Cargo Reforzado</h3>
+              <div class="oport-stars" data-rating="4">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="empty">&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Playera Polo Industrial">
+            </div>
+            <div class="oport-card-body">
+              <h3>Playera Polo Industrial</h3>
+              <div class="oport-stars" data-rating="5">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/4614227/pexels-photo-4614227.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Tela Ignifuga FR-300">
+            </div>
+            <div class="oport-card-body">
+              <h3>Tela Ignifuga FR-300</h3>
+              <div class="oport-stars" data-rating="5">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Camisa Manga Larga Drill">
+            </div>
+            <div class="oport-card-body">
+              <h3>Camisa Manga Larga Drill</h3>
+              <div class="oport-stars" data-rating="4">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="empty">&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Pantalon Industrial Gabardina">
+            </div>
+            <div class="oport-card-body">
+              <h3>Pantalon Industrial Gabardina</h3>
+              <div class="oport-stars" data-rating="3">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="empty">&#9733;</span><span class="empty">&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/3771110/pexels-photo-3771110.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Playera Dry Fit Corporativa">
+            </div>
+            <div class="oport-card-body">
+              <h3>Playera Dry Fit Corporativa</h3>
+              <div class="oport-stars" data-rating="5">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Tela Antiestatica ESD">
+            </div>
+            <div class="oport-card-body">
+              <h3>Tela Antiestatica ESD</h3>
+              <div class="oport-stars" data-rating="4">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="empty">&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Camisa Tipo Guayabera">
+            </div>
+            <div class="oport-card-body">
+              <h3>Camisa Tipo Guayabera</h3>
+              <div class="oport-stars" data-rating="4">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="empty">&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/3735633/pexels-photo-3735633.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Pantalon Mezclilla Industrial">
+            </div>
+            <div class="oport-card-body">
+              <h3>Pantalon Mezclilla Industrial</h3>
+              <div class="oport-stars" data-rating="5">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/3913025/pexels-photo-3913025.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Playera Cuello Redondo Basica">
+            </div>
+            <div class="oport-card-body">
+              <h3>Playera Cuello Redondo Basica</h3>
+              <div class="oport-stars" data-rating="3">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="empty">&#9733;</span><span class="empty">&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oport-card">
+            <div class="oport-card-img">
+              <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Tela Impermeable Premium">
+            </div>
+            <div class="oport-card-body">
+              <h3>Tela Impermeable Premium</h3>
+              <div class="oport-stars" data-rating="4">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="empty">&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="oport-cta">
+      <div class="oport-cta-inner">
+        <h2>Interesado en algun producto?</h2>
+        <p>Contactanos para solicitar una cotizacion personalizada. Nuestro equipo te atendera en menos de 48 horas.</p>
+        <div class="oport-cta-buttons">
+          <a href="/#contacto" class="oport-cta-btn oport-cta-btn-primary">Solicitar Cotizacion</a>
+          <a href="https://yaltontextil.com/assets/pdf/Catalogo%20Yalton%202024.pdf" target="_blank" rel="noopener noreferrer" class="oport-cta-btn oport-cta-btn-secondary">Ver Catalogo PDF</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="/YALTON_GLOBAL.png" alt="Yalton Global Marketer"></div>
+          <p>35+ anos vistiendo la industria mexicana con calidad, precision e innovacion.</p>
+        </div>
+        <div class="footer-nav">
+          <a href="/empresa.html" class="footer-nav-link">Empresa</a>
+          <a href="https://yaltontextil.com/assets/pdf/Catalogo%20Yalton%202024.pdf" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Catalogo</a>
+          <a href="/oportunidades.html" class="footer-nav-link">Oportunidades</a>
+          <a href="/#proceso" class="footer-nav-link">Proceso</a>
+          <a href="/#clientes" class="footer-nav-link">Clientes</a>
+          <a href="/#contacto" class="footer-nav-link">Contacto</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Yalton Global Marketer S.A. de C.V. Todos los derechos reservados - Creado por <a href="https://wa.me/524491809587" target="_blank" rel="noopener noreferrer" class="footer-credit-link">Albertoautomatiza</a></p>
+        <div class="footer-legal">
+          <button type="button" class="footer-legal-btn" id="openPrivacy">Privacidad</button>
+          <button type="button" class="footer-legal-btn" id="openTerms">Terminos</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="privacyModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closePrivacy">&times;</button>
+      <h2>Aviso de Privacidad</h2>
+      <div class="modal-body">
+        <p>Yalton Global Marketer S.A. de C.V., con domicilio en Republica de Paraguay 412, Aguascalientes, Mexico, es responsable del tratamiento de sus datos personales.</p>
+        <h3>Datos que recopilamos</h3>
+        <p>Recopilamos los siguientes datos personales: nombre completo, correo electronico, numero telefonico, empresa, estado y mensaje cuando usted nos contacta a traves de nuestro formulario.</p>
+        <h3>Finalidades del tratamiento</h3>
+        <p>Sus datos personales seran utilizados para: responder a sus solicitudes de cotizacion, brindar informacion sobre nuestros productos y servicios, dar seguimiento a pedidos y mantener comunicacion comercial.</p>
+        <h3>Proteccion de datos</h3>
+        <p>Implementamos medidas de seguridad administrativas, tecnicas y fisicas para proteger sus datos personales contra dano, perdida, alteracion, destruccion o uso no autorizado.</p>
+        <h3>Derechos ARCO</h3>
+        <p>Usted tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales (Derechos ARCO). Para ejercer estos derechos, puede contactarnos a traves de nuestros canales oficiales.</p>
+        <h3>Cambios al aviso de privacidad</h3>
+        <p>Nos reservamos el derecho de efectuar modificaciones o actualizaciones al presente aviso de privacidad. Cualquier cambio sera publicado en nuestro sitio web.</p>
+        <p><strong>Ultima actualizacion: Marzo 2026</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="termsModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeTerms">&times;</button>
+      <h2>Terminos y Condiciones</h2>
+      <div class="modal-body">
+        <p>Bienvenido al sitio web de Yalton Global Marketer S.A. de C.V. Al acceder y utilizar este sitio, usted acepta los siguientes terminos y condiciones.</p>
+        <h3>1. Uso del sitio</h3>
+        <p>Este sitio web es para uso informativo y comercial. Todo el contenido, incluyendo textos, imagenes, logotipos y disenos, es propiedad de Yalton Global Marketer S.A. de C.V. y esta protegido por las leyes de propiedad intelectual aplicables.</p>
+        <h3>2. Cotizaciones</h3>
+        <p>Las cotizaciones solicitadas a traves de este sitio son informativas y no constituyen un contrato vinculante. Los precios, disponibilidad y tiempos de entrega estan sujetos a confirmacion por parte de nuestro equipo comercial.</p>
+        <h3>3. Productos y servicios</h3>
+        <p>Nos esforzamos por presentar informacion precisa sobre nuestros productos y servicios. Sin embargo, nos reservamos el derecho de modificar especificaciones, precios y disponibilidad sin previo aviso.</p>
+        <h3>4. Responsabilidad</h3>
+        <p>Yalton Global Marketer S.A. de C.V. no sera responsable por danos directos o indirectos derivados del uso de este sitio web o de la imposibilidad de acceder al mismo.</p>
+        <h3>5. Propiedad intelectual</h3>
+        <p>Todas las marcas, logotipos, nombres comerciales y disenos mostrados en este sitio son propiedad de Yalton Global Marketer S.A. de C.V. Queda prohibida su reproduccion sin autorizacion previa por escrito.</p>
+        <h3>6. Legislacion aplicable</h3>
+        <p>Estos terminos y condiciones se rigen por las leyes vigentes en los Estados Unidos Mexicanos. Cualquier controversia sera sometida a los tribunales competentes de Aguascalientes, Mexico.</p>
+        <p><strong>Ultima actualizacion: Marzo 2026</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script type="module" src="/oportunidades.js"></script>
+</body>
+</html>
