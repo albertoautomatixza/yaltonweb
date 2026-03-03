@@ -2,12 +2,12 @@ import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 
 const ANNOTATIONS = [
-  { key: 'logo', label: 'Logo Bordado', bodyY: 0.75, side: 'left' },
-  { key: 'tela', label: 'Tela Antifluido', bodyY: 0.63, side: 'right' },
-  { key: 'franjas', label: 'Franjas Reflejantes', bodyY: 0.52, side: 'left' },
-  { key: 'bolsillos', label: 'Bolsillos Reforzados', bodyY: 0.42, side: 'right' },
-  { key: 'costuras', label: 'Costuras Triple Puntada', bodyY: 0.30, side: 'left' },
-  { key: 'rodilleras', label: 'Rodilleras Integradas', bodyY: 0.20, side: 'right' },
+  { key: 'logo', label: 'Logo Bordado', bodyY: 0.78, bodyX: -0.12, side: 'left' },
+  { key: 'tela', label: 'Tela Antifluido', bodyY: 0.65, bodyX: 0.18, side: 'right' },
+  { key: 'franjas', label: 'Franjas Reflejantes', bodyY: 0.50, bodyX: -0.08, side: 'left' },
+  { key: 'bolsillos', label: 'Bolsillos Reforzados', bodyY: 0.40, bodyX: 0.14, side: 'right' },
+  { key: 'costuras', label: 'Costuras Triple Puntada', bodyY: 0.28, bodyX: -0.15, side: 'left' },
+  { key: 'rodilleras', label: 'Rodilleras Integradas', bodyY: 0.15, bodyX: 0.10, side: 'right' },
 ];
 
 function createAnnotationElements(container) {
@@ -51,7 +51,8 @@ function updateAnnotationPositions(container, annData, modelCenter3D, modelHeigh
 
   annData.elements.forEach(({ dot, labelEl, line, ann }) => {
     const worldY = modelCenter3D.y - modelHeight3D / 2 + ann.bodyY * modelHeight3D;
-    const pos3D = new THREE.Vector3(0, worldY, 0);
+    const worldX = (ann.bodyX || 0) * modelHeight3D;
+    const pos3D = new THREE.Vector3(worldX, worldY, 0);
     pos3D.project(camera);
 
     const screenX = (pos3D.x * 0.5 + 0.5) * w;
