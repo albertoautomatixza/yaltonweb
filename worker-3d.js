@@ -49,6 +49,10 @@ function updateAnnotationPositions(container, annData, modelCenter3D, modelHeigh
   const w = rect.width;
   const h = rect.height;
 
+  const isMobile = w < 768;
+  const lineLen = isMobile ? 20 : 38;
+  const labelGap = isMobile ? 22 : 40;
+
   annData.elements.forEach(({ dot, labelEl, line, ann }) => {
     const worldY = modelCenter3D.y - modelHeight3D / 2 + ann.bodyY * modelHeight3D;
     const worldX = (ann.bodyX || 0) * modelHeight3D;
@@ -61,19 +65,16 @@ function updateAnnotationPositions(container, annData, modelCenter3D, modelHeigh
     dot.style.left = screenX + 'px';
     dot.style.top = screenY + 'px';
 
-    const labelOffset = ann.side === 'right' ? 90 : -90;
-    const labelX = screenX + labelOffset;
-
     labelEl.style.top = screenY + 'px';
     if (ann.side === 'right') {
-      labelEl.style.left = (screenX + 40) + 'px';
+      labelEl.style.left = (screenX + labelGap) + 'px';
       labelEl.style.right = 'auto';
     } else {
-      labelEl.style.right = (w - screenX + 40) + 'px';
+      labelEl.style.right = (w - screenX + labelGap) + 'px';
       labelEl.style.left = 'auto';
     }
 
-    const endX = ann.side === 'right' ? screenX + 38 : screenX - 38;
+    const endX = ann.side === 'right' ? screenX + lineLen : screenX - lineLen;
     line.setAttribute('x1', screenX);
     line.setAttribute('y1', screenY);
     line.setAttribute('x2', endX);

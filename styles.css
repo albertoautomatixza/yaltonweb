@@ -926,6 +926,7 @@ main {
   inset: 0;
   pointer-events: none;
   z-index: 2;
+  overflow: hidden;
   transition: opacity 0.5s ease;
 }
 
@@ -1995,6 +1996,21 @@ a.contact-link:hover {
   .wireframe-3d-viewer {
     min-height: 500px;
     order: 1;
+  }
+
+  .worker-ann-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .worker-ann-dot::after {
+    inset: -3px;
+  }
+
+  .worker-ann-label {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.4rem;
+    letter-spacing: 0.03em;
   }
 
   .client-card {
