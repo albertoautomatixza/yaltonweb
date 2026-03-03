@@ -1,15 +1,93 @@
 import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 
+const ANNOTATIONS = [
+  { key: 'casco', label: 'Casco de Seguridad', bodyY: 0.95, side: 'right' },
+  { key: 'logo', label: 'Logo Bordado', bodyY: 0.72, side: 'left' },
+  { key: 'bandas', label: 'Bandas Reflectantes', bodyY: 0.58, side: 'right' },
+  { key: 'bolsillos', label: 'Bolsillos Reforzados', bodyY: 0.42, side: 'left' },
+  { key: 'rodilleras', label: 'Rodilleras Integradas', bodyY: 0.22, side: 'right' },
+  { key: 'botas', label: 'Botas Industriales', bodyY: 0.05, side: 'left' },
+];
+
+function createAnnotationElements(container) {
+  const overlay = document.createElement('div');
+  overlay.className = 'worker-annotations-overlay';
+  container.appendChild(overlay);
+
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.classList.add('worker-annotations-svg');
+  overlay.appendChild(svg);
+
+  const elements = ANNOTATIONS.map((ann, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'worker-ann-dot';
+    overlay.appendChild(dot);
+
+    const labelEl = document.createElement('div');
+    labelEl.className = `worker-ann-label worker-ann-label--${ann.side}`;
+    labelEl.textContent = ann.label;
+    labelEl.style.animationDelay = `${i * 0.15}s`;
+    overlay.appendChild(labelEl);
+
+    const line = document.createElementNS(svgNS, 'line');
+    line.setAttribute('stroke', '#45b35a');
+    line.setAttribute('stroke-width', '1');
+    line.setAttribute('stroke-dasharray', '4 3');
+    line.setAttribute('opacity', '0.7');
+    svg.appendChild(line);
+
+    return { dot, labelEl, line, ann };
+  });
+
+  return { overlay, svg, elements };
+}
+
+function updateAnnotationPositions(container, annData, modelCenter3D, modelHeight3D, camera, renderer) {
+  const rect = container.getBoundingClientRect();
+  const w = rect.width;
+  const h = rect.height;
+
+  annData.elements.forEach(({ dot, labelEl, line, ann }) => {
+    const worldY = modelCenter3D.y - modelHeight3D / 2 + ann.bodyY * modelHeight3D;
+    const pos3D = new THREE.Vector3(0, worldY, 0);
+    pos3D.project(camera);
+
+    const screenX = (pos3D.x * 0.5 + 0.5) * w;
+    const screenY = (-pos3D.y * 0.5 + 0.5) * h;
+
+    dot.style.left = screenX + 'px';
+    dot.style.top = screenY + 'px';
+
+    const labelOffset = ann.side === 'right' ? 90 : -90;
+    const labelX = screenX + labelOffset;
+
+    labelEl.style.top = screenY + 'px';
+    if (ann.side === 'right') {
+      labelEl.style.left = (screenX + 40) + 'px';
+      labelEl.style.right = 'auto';
+    } else {
+      labelEl.style.right = (w - screenX + 40) + 'px';
+      labelEl.style.left = 'auto';
+    }
+
+    const endX = ann.side === 'right' ? screenX + 38 : screenX - 38;
+    line.setAttribute('x1', screenX);
+    line.setAttribute('y1', screenY);
+    line.setAttribute('x2', endX);
+    line.setAttribute('y2', screenY);
+  });
+}
+
 export function initWorker3D() {
   const canvas = document.getElementById('worker-3d-canvas');
   if (!canvas) return;
 
+  const container = canvas.parentElement;
   const scene = new THREE.Scene();
-
-  const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 1000);
-  camera.position.set(0, 80, 250);
-  camera.lookAt(0, 60, 0);
+  const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 2000);
+  camera.position.set(0, 0, 300);
 
   const renderer = new THREE.WebGLRenderer({
     canvas,
@@ -29,6 +107,11 @@ export function initWorker3D() {
   const workerGroup = new THREE.Group();
   scene.add(workerGroup);
 
+  let modelCenter = new THREE.Vector3();
+  let modelHeight = 1;
+  let annData = null;
+  let modelLoaded = false;
+
   const loader = new OBJLoader();
   loader.load(
     '/WORKER_DELIVERY.obj',
@@ -41,20 +124,26 @@ export function initWorker3D() {
 
       const box = new THREE.Box3().setFromObject(obj);
       const center = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
       obj.position.sub(center);
 
-      const size = box.getSize(new THREE.Vector3());
       const maxDim = Math.max(size.x, size.y, size.z);
-      const targetHeight = 160;
-      const scale = targetHeight / maxDim;
+      const targetSize = 110;
+      const scale = targetSize / maxDim;
       obj.scale.setScalar(scale);
 
       workerGroup.add(obj);
 
       const scaledBox = new THREE.Box3().setFromObject(workerGroup);
-      const scaledCenter = scaledBox.getCenter(new THREE.Vector3());
-      camera.position.set(0, scaledCenter.y, maxDim * scale * 1.6);
-      camera.lookAt(0, scaledCenter.y, 0);
+      modelCenter = scaledBox.getCenter(new THREE.Vector3());
+      modelHeight = scaledBox.getSize(new THREE.Vector3()).y;
+
+      camera.position.set(0, modelCenter.y, modelHeight * 1.5);
+      camera.lookAt(0, modelCenter.y, 0);
+
+      annData = createAnnotationElements(container);
+      modelLoaded = true;
+      updateAnnotationPositions(container, annData, modelCenter, modelHeight, camera, renderer);
     },
     undefined,
     (err) => {
@@ -63,26 +152,41 @@ export function initWorker3D() {
   );
 
   function resize() {
-    const container = canvas.parentElement;
     if (!container) return;
     const rect = container.getBoundingClientRect();
     const w = rect.width;
     const h = rect.height;
-    canvas.width = w * Math.min(window.devicePixelRatio, 2);
-    canvas.height = h * Math.min(window.devicePixelRatio, 2);
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
-    renderer.setSize(w, h, false);
+    renderer.setSize(w, h);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
+    if (modelLoaded && annData) {
+      updateAnnotationPositions(container, annData, modelCenter, modelHeight, camera, renderer);
+    }
   }
 
   resize();
   window.addEventListener('resize', resize);
 
+  let showAnnotations = true;
+  const ROTATION_SHOW_RANGE = Math.PI * 0.4;
+
   function animate() {
     requestAnimationFrame(animate);
     workerGroup.rotation.y += 0.004;
+
+    const normalizedY = ((workerGroup.rotation.y % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2);
+    const isFacingCamera = normalizedY < ROTATION_SHOW_RANGE || normalizedY > (Math.PI * 2 - ROTATION_SHOW_RANGE);
+
+    if (annData) {
+      const targetOpacity = isFacingCamera ? 1 : 0;
+      annData.overlay.style.opacity = targetOpacity;
+      annData.overlay.style.pointerEvents = isFacingCamera ? 'auto' : 'none';
+
+      if (isFacingCamera) {
+        updateAnnotationPositions(container, annData, modelCenter, modelHeight, camera, renderer);
+      }
+    }
+
     renderer.render(scene, camera);
   }
   animate();
