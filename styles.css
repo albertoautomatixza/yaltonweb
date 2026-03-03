@@ -64,15 +64,15 @@ body {
 }
 
 .nav-logo-img {
-  height: 130px;
+  height: 80px;
   width: auto;
   display: block;
   filter: brightness(0) invert(1);
   transition: filter 0.4s var(--ease);
 }
 
-.nav-logo:hover .nav-logo-img {
-  filter: none;
+.navbar.scrolled .nav-logo-img {
+  filter: brightness(0) invert(1);
 }
 
 .nav-right {
