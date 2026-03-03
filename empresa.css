@@ -155,11 +155,11 @@
 }
 
 .prefieren-title {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   color: var(--gray-800);
+  line-height: 1.15;
   margin-bottom: 3rem;
-  font-style: italic;
 }
 
 .prefieren-grid {
