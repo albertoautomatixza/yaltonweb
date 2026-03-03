@@ -1,6 +1,7 @@
 import { initI18n } from './i18n.js';
 import { initTextRotator } from './text-rotator.js';
 import { initGridRoom } from './grid-room.js';
+import { initWorker3D } from './worker-3d.js';
 
 function onScroll() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -48,6 +49,7 @@ function initApp() {
   initI18n();
   initTextRotator();
   initGridRoom();
+  initWorker3D();
   initModals();
   initHamburger();
 }

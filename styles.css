@@ -906,6 +906,21 @@ main {
   color: var(--yalton-green-dark);
 }
 
+.wireframe-3d-viewer {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wireframe-3d-viewer canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 
 .feature-list {
   margin-top: 3rem;
@@ -1904,6 +1919,11 @@ a.contact-link:hover {
 
   .wireframe-content {
     grid-template-columns: 1fr;
+  }
+
+  .wireframe-3d-viewer {
+    min-height: 350px;
+    order: -1;
   }
 
   .client-card {
