@@ -65,6 +65,10 @@ const translations = {
     'serv.c6.d': 'Manejamos un stock amplio, de variedad de productos de linea, con el motivo de poder satisfacer tus necesidades en un tiempo inmediato.',
     'serv.c7.t': 'Identidad y Logo',
     'serv.c7.d': 'Sabemos que tu logo es la identidad de tu empresa, por ello manejamos la mejor calidad en trabajo de bordado, sublimacion, serigrafia, impresion textil.',
+    'serv.c8.t': 'Servicio en Linea',
+    'serv.c8.d': 'Una vez que trabajes con nosotros, se te asignara un num. de usuario y clave para que puedas capturar tus pedidos en linea de manera de carrito.',
+    'serv.c9.t': 'Tecnologia de Punta',
+    'serv.c9.d': 'Utilizamos la mas alta tecnologia en maquinaria y procesos de manufactura para garantizar acabados de precision y calidad superior en cada prenda.',
 
     'proc.label': 'Nuestro Proceso',
     'proc.title': 'De la idea al uniforme',
@@ -176,6 +180,10 @@ const translations = {
     'serv.c6.d': 'We maintain a wide stock of line products to satisfy your needs in the shortest time possible.',
     'serv.c7.t': 'Identity & Logo',
     'serv.c7.d': 'We know your logo is your company\'s identity, so we offer the highest quality in embroidery, sublimation, screen printing, and textile printing.',
+    'serv.c8.t': 'Online Service',
+    'serv.c8.d': 'Once you work with us, you will be assigned a user number and password so you can place your orders online in a shopping cart format.',
+    'serv.c9.t': 'Cutting-Edge Technology',
+    'serv.c9.d': 'We use the most advanced machinery and manufacturing processes to guarantee precision finishes and superior quality in every garment.',
 
     'proc.label': 'Our Process',
     'proc.title': 'From idea to uniform',
