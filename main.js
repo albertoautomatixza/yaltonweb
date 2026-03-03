@@ -338,13 +338,15 @@ if (techItems.length) {
     if (techSection) {
       const sectionRect = techSection.getBoundingClientRect();
       const windowH = window.innerHeight;
-      const sectionProgress = Math.min(Math.max((windowH - sectionRect.top) / (windowH + sectionRect.height), 0), 1);
+      const enterStart = windowH;
+      const fillComplete = windowH * 0.15;
+      const sectionProgress = Math.min(Math.max((enterStart - sectionRect.top) / (enterStart - fillComplete), 0), 1);
 
       techItems.forEach((item, index) => {
         const lineFill = item.querySelector('.tech-item-line-fill');
         if (!lineFill) return;
-        const offset = index * 0.08;
-        const itemProgress = Math.min(Math.max((sectionProgress - offset) / (0.7 - offset), 0), 1);
+        const delay = index * 0.05;
+        const itemProgress = Math.min(Math.max((sectionProgress - delay) / (1 - delay), 0), 1);
         lineFill.style.width = `${itemProgress * 100}%`;
       });
     }
