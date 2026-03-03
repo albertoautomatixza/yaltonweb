@@ -139,7 +139,7 @@ export function initWorker3D() {
       modelCenter = scaledBox.getCenter(new THREE.Vector3());
       modelHeight = scaledBox.getSize(new THREE.Vector3()).y;
 
-      camera.position.set(0, modelCenter.y, modelHeight * 1.5);
+      camera.position.set(0, modelCenter.y, modelHeight * 2.2);
       camera.lookAt(0, modelCenter.y, 0);
 
       annData = createAnnotationElements(container);
