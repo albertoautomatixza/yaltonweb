@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { initI18n } from './i18n.js';
 import { initTextRotator } from './text-rotator.js';
+import { initGridRoom } from './grid-room.js';
 
 let scene, camera, renderer, poloShirt;
 let wireframeVersion;
@@ -310,11 +311,13 @@ if (document.readyState === 'loading') {
     init();
     initI18n();
     initTextRotator();
+    initGridRoom();
   });
 } else {
   init();
   initI18n();
   initTextRotator();
+  initGridRoom();
 }
 
 const techItems = document.querySelectorAll('[data-tech-item]');
