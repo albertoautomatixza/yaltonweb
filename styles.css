@@ -1991,13 +1991,25 @@ a.contact-link:hover {
     font-size: 2rem;
   }
 
+  .wireframe-section {
+    padding: 3rem 1rem 4rem;
+  }
+
   .wireframe-content {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .wireframe-text {
+    max-width: 100%;
+    text-align: left;
   }
 
   .wireframe-3d-viewer {
-    min-height: 500px;
+    min-height: 400px;
     order: 1;
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .worker-ann-dot {
