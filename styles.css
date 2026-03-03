@@ -1293,6 +1293,17 @@ main {
   font-weight: 500;
 }
 
+a.contact-link {
+  text-decoration: none;
+  color: #142028;
+  display: block;
+  transition: color 0.3s var(--ease);
+}
+
+a.contact-link:hover {
+  color: var(--yalton-green);
+}
+
 .contact-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
