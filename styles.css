@@ -483,7 +483,7 @@ main {
 }
 
 .tech-section {
-  padding: 4rem 2rem 8rem;
+  padding: 4rem 2rem 3rem;
   background: #ffffff;
 }
 
@@ -603,7 +603,11 @@ main {
 }
 
 .tech-item-body {
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.tech-item:last-child .tech-item-body {
+  padding-bottom: 0;
 }
 
 .tech-item-desc {
