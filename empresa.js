@@ -1,3 +1,5 @@
+import { initI18n } from './i18n.js';
+
 function initModals() {
   const privacyModal = document.getElementById('privacyModal');
   const termsModal = document.getElementById('termsModal');
@@ -90,6 +92,7 @@ function init() {
   initScrollTop();
   initHamburger();
   initAnimations();
+  initI18n();
 }
 
 if (document.readyState === 'loading') {

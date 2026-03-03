@@ -1,3 +1,5 @@
+import { initI18n } from './i18n.js';
+
 function initSlider() {
   const slides = document.querySelectorAll('.oport-slide');
   const dots = document.querySelectorAll('.oport-dot');
@@ -146,6 +148,7 @@ function init() {
   initScrollTop();
   initHamburger();
   initCardAnimations();
+  initI18n();
 }
 
 if (document.readyState === 'loading') {
