@@ -161,7 +161,7 @@ if (techItems.length) {
 document.querySelectorAll('.service-card[data-hover-img]').forEach(card => {
   const bg = card.querySelector('.service-card-bg');
   if (bg) {
-    bg.style.backgroundImage = `url(${card.dataset.hoverImg})`;
+    bg.style.backgroundImage = `url('${card.dataset.hoverImg}')`;
   }
 });
 
