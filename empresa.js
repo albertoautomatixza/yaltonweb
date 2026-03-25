@@ -1,5 +1,60 @@
 import { initI18n } from './i18n.js';
 
+function initHeroSlider() {
+  const slides = document.querySelectorAll('.empresa-hero-slide');
+  const dots = document.querySelectorAll('.empresa-hero-dot');
+  const prevBtn = document.querySelector('.empresa-hero-prev');
+  const nextBtn = document.querySelector('.empresa-hero-next');
+  let current = 0;
+  let interval;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() {
+    goTo(current + 1);
+  }
+
+  function startAutoplay() {
+    interval = setInterval(next, 5000);
+  }
+
+  function resetAutoplay() {
+    clearInterval(interval);
+    startAutoplay();
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      goTo(current - 1);
+      resetAutoplay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      goTo(current + 1);
+      resetAutoplay();
+    });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(parseInt(dot.dataset.slide));
+      resetAutoplay();
+    });
+  });
+
+  if (slides.length > 0) {
+    startAutoplay();
+  }
+}
+
 function initModals() {
   const privacyModal = document.getElementById('privacyModal');
   const termsModal = document.getElementById('termsModal');
@@ -88,6 +143,7 @@ function initAnimations() {
 }
 
 function init() {
+  initHeroSlider();
   initModals();
   initScrollTop();
   initHamburger();

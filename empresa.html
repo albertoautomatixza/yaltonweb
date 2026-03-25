@@ -36,13 +36,35 @@
 
   <main>
     <section class="empresa-hero">
-      <div class="empresa-hero-bg">
-        <img src="/video_intro_web_yalton.gif" alt="Yalton factory">
+      <div class="empresa-hero-track">
+        <div class="empresa-hero-slide active">
+          <img src="/video_intro_web_yalton.gif" alt="Uniformes industriales">
+          <div class="empresa-hero-overlay"></div>
+        </div>
+        <div class="empresa-hero-slide">
+          <img src="https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" alt="Telas premium">
+          <div class="empresa-hero-overlay"></div>
+        </div>
+        <div class="empresa-hero-slide">
+          <img src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" alt="Entregas personalizadas">
+          <div class="empresa-hero-overlay"></div>
+        </div>
       </div>
       <div class="empresa-hero-content">
         <span class="section-label" data-i18n="emp.hero.label">Empresa</span>
         <h1 data-i18n="emp.hero.title">¿Quiénes Somos?</h1>
       </div>
+      <div class="empresa-hero-dots">
+        <button class="empresa-hero-dot active" data-slide="0"></button>
+        <button class="empresa-hero-dot" data-slide="1"></button>
+        <button class="empresa-hero-dot" data-slide="2"></button>
+      </div>
+      <button class="empresa-hero-arrow empresa-hero-prev" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="empresa-hero-arrow empresa-hero-next" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
     </section>
 
     <section class="empresa-about">
