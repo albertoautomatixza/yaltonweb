@@ -123,7 +123,7 @@ const translations = {
     'form.company': 'Empresa',
     'form.phone': 'Teléfono',
     'form.state': 'Estado',
-    'form.message': 'Déjanos un mensaje',
+    'form.message': 'Dinos tus necesidades',
     'form.submit': 'Solicitar Cotización',
     'form.catalog': 'Ver Nuestro Catálogo',
 
