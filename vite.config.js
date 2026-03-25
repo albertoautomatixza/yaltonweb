@@ -11,7 +11,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         empresa: resolve(__dirname, 'empresa.html'),
-        oportunidades: resolve(__dirname, 'oportunidades.html')
+        promociones: resolve(__dirname, 'promociones.html')
       }
     }
   }
