@@ -23,7 +23,7 @@ const translations = {
     'hero.cta2': 'Ver Catálogo',
 
     'tech.label': 'Tecnología Avanzada',
-    'tech.title': 'Precisión en cada puntada',
+    'tech.title': 'Calidad de materiales',
     'tech.card1.title': 'Diseño Digital',
     'tech.card1.desc': 'Modelado 3D y simulación de prendas antes de producción',
     'tech.card1.list1': 'Patrones digitales de alta precisión',
@@ -229,7 +229,7 @@ const translations = {
     'hero.cta2': 'View Catalog',
 
     'tech.label': 'Advanced Technology',
-    'tech.title': 'Precision in every stitch',
+    'tech.title': 'Material Quality',
     'tech.card1.title': 'Digital Design',
     'tech.card1.desc': '3D modeling and garment simulation before production',
     'tech.card1.list1': 'High-precision digital patterns',
