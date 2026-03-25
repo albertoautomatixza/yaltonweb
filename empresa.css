@@ -45,25 +45,11 @@
   max-width: 700px;
 }
 
-.empresa-hero-content .section-label {
-  display: inline-block;
-  padding: 0.35rem 0.85rem;
-  background: rgba(4, 82, 24, 0.4);
-  border: 1px solid var(--yalton-green-light);
-  border-radius: 16px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--accent-color);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 1rem;
-}
-
 .empresa-hero-content h1 {
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 800;
   color: #fff;
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
 .empresa-hero-dots {
