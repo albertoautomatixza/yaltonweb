@@ -648,7 +648,7 @@ main {
 .clients-carousel-track {
   display: flex;
   gap: 1.5rem;
-  animation: clientsScroll 40s linear infinite;
+  animation: clientsScroll 120s linear infinite;
   width: max-content;
 }
 
