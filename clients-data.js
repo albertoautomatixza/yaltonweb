@@ -93,12 +93,17 @@ function createCard(c) {
     : `<div class="client-card-logo-placeholder">${c.name.charAt(0)}</div>`;
   return `
     <div class="client-card">
-      <div class="client-card-badge client-card-badge--solution">EMPLEADOS SATISFECHOS</div>
-      <p class="client-card-employees">No. de empleados aprox: <strong>${c.employees.toLocaleString()}</strong></p>
-      <div class="client-card-footer">
+      <div class="client-card-logo-area">
         ${logoHtml}
-        <div class="client-card-info">
-          <div class="client-card-name">${c.name}</div>
+      </div>
+      <div class="client-card-body">
+        <div class="client-card-satisfied">
+          <svg class="client-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Empleados satisfechos</span>
+        </div>
+        <div class="client-card-count">
+          <span class="client-card-count-number">${c.employees.toLocaleString()}</span>
+          <span class="client-card-count-label">empleados</span>
         </div>
         <div class="client-card-stars">${stars}</div>
       </div>
