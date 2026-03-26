@@ -730,6 +730,14 @@ main {
   gap: 0.75rem;
 }
 
+.client-card-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.3;
+}
+
 .client-card-satisfied {
   display: flex;
   align-items: center;

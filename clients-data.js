@@ -97,6 +97,7 @@ function createCard(c) {
         ${logoHtml}
       </div>
       <div class="client-card-body">
+        <div class="client-card-name">${c.name}</div>
         <div class="client-card-satisfied">
           <svg class="client-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           <span>Empleados satisfechos</span>
