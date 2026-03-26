@@ -44,10 +44,44 @@ function buildExpandedList() {
       expanded.push(c);
     }
   });
+
   for (let i = expanded.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [expanded[i], expanded[j]] = [expanded[j], expanded[i]];
   }
+
+  for (let attempts = 0; attempts < 200; attempts++) {
+    let fixed = true;
+    for (let i = 1; i < expanded.length; i++) {
+      if (expanded[i].name === expanded[i - 1].name) {
+        fixed = false;
+        let swapIdx = -1;
+        for (let j = i + 1; j < expanded.length; j++) {
+          if (expanded[j].name !== expanded[i].name &&
+              (j + 1 >= expanded.length || expanded[j].name !== expanded[i - 1].name) &&
+              (i - 2 < 0 || expanded[j].name !== expanded[i - 2].name)) {
+            swapIdx = j;
+            break;
+          }
+        }
+        if (swapIdx === -1) {
+          for (let j = 0; j < i - 1; j++) {
+            if (expanded[j].name !== expanded[i].name &&
+                (j > 0 && expanded[j - 1].name !== expanded[i].name || j === 0) &&
+                (j < expanded.length - 1 && expanded[j + 1].name !== expanded[i].name || j === expanded.length - 1)) {
+              swapIdx = j;
+              break;
+            }
+          }
+        }
+        if (swapIdx !== -1) {
+          [expanded[i], expanded[swapIdx]] = [expanded[swapIdx], expanded[i]];
+        }
+      }
+    }
+    if (fixed) break;
+  }
+
   return expanded;
 }
 
