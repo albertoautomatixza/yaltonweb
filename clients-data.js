@@ -22,7 +22,6 @@ const clients = [
   { name: "Sakaiya de Mexico", employees: 650, vistas: 1, logo: "/sakaiya.png" },
   { name: "TEC Engineering", employees: 100, vistas: 1, logo: "/tec.png" },
   { name: "Linea Italia", employees: 150, vistas: 1, logo: "/italia.png" },
-  { name: "Coffee & Go", employees: 80, vistas: 1, logo: null },
   { name: "Swissmex", employees: 700, vistas: 1, logo: "/swissmex.png" },
   { name: "TST Nikkei", employees: 25, vistas: 1, logo: "/nikkei.png" },
   { name: "TF-Metal", employees: 400, vistas: 1, logo: "/tf_metal.png" },
