@@ -709,6 +709,17 @@ main {
   font-style: italic;
 }
 
+.client-card-employees {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.client-card-employees strong {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+
 .client-card-footer {
   display: flex;
   align-items: center;
@@ -726,6 +737,21 @@ main {
   flex-shrink: 0;
   filter: brightness(0) invert(1);
   opacity: 0.8;
+}
+
+.client-card-logo-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  background: rgba(69, 179, 90, 0.2);
+  border: 1px solid rgba(69, 179, 90, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent-color);
 }
 
 .client-card-info {

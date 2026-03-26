@@ -3,6 +3,7 @@ import { initTextRotator } from './text-rotator.js';
 import { initGridRoom } from './grid-room.js';
 import { initWorker3D } from './worker-3d.js';
 import { initHeroSlideshow } from './hero-slideshow.js';
+import { initClientsCarousel } from './clients-data.js';
 
 function onScroll() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -54,6 +55,7 @@ function initApp() {
   initModals();
   initHamburger();
   initHeroSlideshow();
+  initClientsCarousel();
 }
 
 function initModals() {
@@ -167,14 +169,6 @@ document.querySelectorAll('.service-card[data-hover-img]').forEach(card => {
   }
 });
 
-const carouselTrack = document.querySelector('.clients-carousel-track');
-if (carouselTrack) {
-  const cards = Array.from(carouselTrack.children);
-  cards.forEach(card => {
-    const clone = card.cloneNode(true);
-    carouselTrack.appendChild(clone);
-  });
-}
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
