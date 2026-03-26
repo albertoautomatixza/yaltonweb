@@ -72,24 +72,8 @@ body {
   transition: filter 0.4s var(--ease);
 }
 
-.nav-logo-divider {
-  width: 1px;
-  align-self: stretch;
-  background: rgba(255, 255, 255, 0.6);
-  flex-shrink: 0;
-}
-
-.nav-logo-img--nofilter {
-  filter: none;
-  height: 60px;
-}
-
 .navbar.scrolled .nav-logo-img {
   filter: brightness(0) invert(1);
-}
-
-.navbar.scrolled .nav-logo-img--nofilter {
-  filter: none;
 }
 
 .nav-right {
@@ -1557,17 +1541,6 @@ a.contact-link:hover {
   filter: brightness(0) invert(1);
 }
 
-.footer-logo-img--nofilter {
-  filter: none !important;
-  height: 60px !important;
-}
-
-.footer-logo-divider {
-  width: 1px;
-  align-self: stretch;
-  background: rgba(255, 255, 255, 0.5);
-  flex-shrink: 0;
-}
 
 .footer-brand p {
   color: #aaa;
@@ -1870,9 +1843,6 @@ a.contact-link:hover {
     height: 36px;
   }
 
-  .nav-logo-img--nofilter {
-    height: 36px;
-  }
 
   .nav-logo {
     gap: 0.5rem;
