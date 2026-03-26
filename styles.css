@@ -79,18 +79,16 @@ body {
   flex-shrink: 0;
 }
 
-.nav-logo-img--textil {
+.nav-logo-img--nofilter {
   filter: none;
-  mix-blend-mode: screen;
 }
 
 .navbar.scrolled .nav-logo-img {
   filter: brightness(0) invert(1);
 }
 
-.navbar.scrolled .nav-logo-img--textil {
+.navbar.scrolled .nav-logo-img--nofilter {
   filter: none;
-  mix-blend-mode: screen;
 }
 
 .nav-right {
@@ -1558,9 +1556,8 @@ a.contact-link:hover {
   filter: brightness(0) invert(1);
 }
 
-.footer-logo-img--textil {
+.footer-logo-img--nofilter {
   filter: none !important;
-  mix-blend-mode: screen;
 }
 
 .footer-logo-divider {
