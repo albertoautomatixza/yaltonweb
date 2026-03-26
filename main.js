@@ -2,6 +2,7 @@ import { initI18n } from './i18n.js';
 import { initTextRotator } from './text-rotator.js';
 import { initGridRoom } from './grid-room.js';
 import { initWorker3D } from './worker-3d.js';
+import { initHeroSlideshow } from './hero-slideshow.js';
 
 function onScroll() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -52,6 +53,7 @@ function initApp() {
   initWorker3D();
   initModals();
   initHamburger();
+  initHeroSlideshow();
 }
 
 function initModals() {
