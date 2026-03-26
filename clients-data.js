@@ -26,7 +26,7 @@ const clients = [
   { name: "TST Nikkei", employees: 25, vistas: 1, logo: "/nikkei.png" },
   { name: "TF-Metal", employees: 400, vistas: 1, logo: "/tf_metal.png" },
   { name: "Cremeria Aguascalientes", employees: 160, vistas: 1, logo: "/cremeria.png" },
-  { name: "Printpack", employees: 200, vistas: 1, logo: "/printpack.png" },
+  { name: "Printpack", employees: 200, vistas: 1, logo: "/printpack.png", invertLogo: true },
   { name: "Gonzalez Trucking", employees: 200, vistas: 1, logo: "/gonzalez.png" },
   { name: "Traca", employees: 130, vistas: 1, logo: "/traca.png" },
   { name: "Perla Transportes", employees: 140, vistas: 1, logo: "/perla.png" },
@@ -35,7 +35,6 @@ const clients = [
   { name: "Protoss Metales", employees: 80, vistas: 1, logo: "/protoss.png" },
   { name: "Parker-Trutec Mexicana", employees: 100, vistas: 1, logo: "/parker.png" },
   { name: "Fumigaciones San Marcos", employees: 50, vistas: 1, logo: "/san_marcos.png" },
-  { name: "Materias Primas Monterrey", employees: 220, vistas: 1, logo: null },
   { name: "GTR Internacional", employees: 200, vistas: 1, logo: "/gtr.png" },
 ];
 
@@ -55,8 +54,9 @@ function buildExpandedList() {
 
 function createCard(c) {
   const stars = '<span>&#9733;</span>'.repeat(5);
+  const invertClass = c.invertLogo ? ' client-card-logo-img--invert' : '';
   const logoHtml = c.logo
-    ? `<img class="client-card-logo-img" src="${c.logo}" alt="${c.name}">`
+    ? `<img class="client-card-logo-img${invertClass}" src="${c.logo}" alt="${c.name}">`
     : `<div class="client-card-logo-placeholder">${c.name.charAt(0)}</div>`;
   return `
     <div class="client-card">

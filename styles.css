@@ -739,6 +739,10 @@ main {
   padding: 4px;
 }
 
+.client-card-logo-img--invert {
+  filter: invert(1);
+}
+
 .client-card-logo-placeholder {
   width: 36px;
   height: 36px;
