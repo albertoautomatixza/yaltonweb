@@ -26,7 +26,6 @@ const clients = [
   { name: "TST Nikkei", employees: 25, vistas: 1, logo: "/nikkei.png" },
   { name: "TF-Metal", employees: 400, vistas: 1, logo: "/tf_metal.png" },
   { name: "Cremeria Aguascalientes", employees: 160, vistas: 1, logo: "/cremeria.png" },
-  { name: "Printpack", employees: 200, vistas: 1, logo: "/printpack.png", invertLogo: true },
   { name: "Gonzalez Trucking", employees: 200, vistas: 1, logo: "/gonzalez.png" },
   { name: "Traca", employees: 130, vistas: 1, logo: "/traca.png" },
   { name: "Perla Transportes", employees: 140, vistas: 1, logo: "/perla.png" },
