@@ -8,7 +8,7 @@ const clients = [
   { name: "Mahle", employees: 450, vistas: 2, logo: "/mahle.png" },
   { name: "Hexpol", employees: 900, vistas: 1, logo: "/hexpol.png" },
   { name: "Minth Group", employees: 2900, vistas: 3, logo: "/minth.png" },
-  { name: "Vianney", employees: 1500, vistas: 2, logo: null },
+  { name: "Vianney", employees: 1500, vistas: 2, logo: "/vianney.png" },
   { name: "Cantia", employees: 200, vistas: 1, logo: "/Asset_43.png" },
   { name: "Frio Express", employees: 500, vistas: 1, logo: "/Asset_42.png" },
   { name: "KT Mex", employees: 450, vistas: 1, logo: "/kt.png" },

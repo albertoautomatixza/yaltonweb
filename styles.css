@@ -735,8 +735,8 @@ main {
   object-fit: contain;
   border-radius: 6px;
   flex-shrink: 0;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
+  background: #ffffff;
+  padding: 4px;
 }
 
 .client-card-logo-placeholder {
