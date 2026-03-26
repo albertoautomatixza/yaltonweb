@@ -1,7 +1,7 @@
 const clients = [
   { name: "Bosch", employees: 900, vistas: 3, logo: "/bosch.png" },
   { name: "Eaton", employees: 550, vistas: 3, logo: null },
-  { name: "Sanoh", employees: 900, vistas: 2, logo: null },
+  { name: "Sanoh", employees: 900, vistas: 2, logo: "/sanoh.png" },
   { name: "La Huerta", employees: 400, vistas: 2, logo: null },
   { name: "Gestamp", employees: 600, vistas: 1, logo: null },
   { name: "Marelli", employees: 5200, vistas: 3, logo: null },
@@ -18,8 +18,8 @@ const clients = [
   { name: "Advics", employees: 700, vistas: 1, logo: null },
   { name: "Llantas D'Lago", employees: 300, vistas: 1, logo: null },
   { name: "Gas Noel", employees: 600, vistas: 2, logo: "/noel.png" },
-  { name: "Stanley", employees: 600, vistas: 1, logo: null },
-  { name: "Sakaiya de Mexico", employees: 650, vistas: 1, logo: null },
+  { name: "Stanley", employees: 600, vistas: 1, logo: "/stanley.png" },
+  { name: "Sakaiya de Mexico", employees: 650, vistas: 1, logo: "/sakaiya.png" },
   { name: "TEC Engineering", employees: 100, vistas: 1, logo: null },
   { name: "Linea Italia", employees: 150, vistas: 1, logo: null },
   { name: "Coffee & Go", employees: 80, vistas: 1, logo: null },
@@ -35,7 +35,7 @@ const clients = [
   { name: "Orotex", employees: 250, vistas: 1, logo: "/orotex.png" },
   { name: "Protoss Metales", employees: 80, vistas: 1, logo: "/protoss.png" },
   { name: "Parker-Trutec Mexicana", employees: 100, vistas: 1, logo: "/parker.png" },
-  { name: "Fumigaciones San Marcos", employees: 50, vistas: 1, logo: null },
+  { name: "Fumigaciones San Marcos", employees: 50, vistas: 1, logo: "/san_marcos.png" },
   { name: "Materias Primas Monterrey", employees: 220, vistas: 1, logo: null },
   { name: "GTR Internacional", employees: 200, vistas: 1, logo: null },
 ];

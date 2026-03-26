@@ -7,6 +7,7 @@ export default defineConfig({
     port: 5173
   },
   build: {
+    copyPublicDir: true,
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
@@ -14,5 +15,6 @@ export default defineConfig({
         promociones: resolve(__dirname, 'promociones.html')
       }
     }
-  }
+  },
+  publicDir: 'public'
 });
