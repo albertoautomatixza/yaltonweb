@@ -1517,6 +1517,12 @@ a.contact-link:hover {
   transform: translateX(5px);
 }
 
+.submit-btn.validation-message {
+  background: var(--yalton-green);
+  border-color: var(--yalton-green);
+  cursor: not-allowed;
+}
+
 .catalog-btn {
   display: flex;
   align-items: center;

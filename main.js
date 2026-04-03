@@ -64,8 +64,10 @@ function initContactForm() {
     const mensaje = form.querySelector('#mensaje').value.trim();
 
     if (!nombre || !email || !empresa || !telefono || !estado || !mensaje) {
+      submitBtn.classList.add('validation-message');
       submitBtn.innerHTML = '<span>Complete todos los campos</span>';
       setTimeout(() => {
+        submitBtn.classList.remove('validation-message');
         submitBtn.innerHTML = originalText;
       }, 2000);
       return;
