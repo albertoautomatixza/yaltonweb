@@ -55,15 +55,24 @@ function initContactForm() {
 
     const submitBtn = form.querySelector('.submit-btn');
     const originalText = submitBtn.innerHTML;
+
+    const nombre = form.querySelector('#nombre').value.trim();
+    const email = form.querySelector('#email').value.trim();
+    const empresa = form.querySelector('#empresa').value.trim();
+    const telefono = form.querySelector('#telefono').value.trim();
+    const estado = form.querySelector('#estado').value.trim();
+    const mensaje = form.querySelector('#mensaje').value.trim();
+
+    if (!nombre || !email || !empresa || !telefono || !estado || !mensaje) {
+      submitBtn.innerHTML = '<span>Complete todos los campos</span>';
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+      }, 2000);
+      return;
+    }
+
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<span>Enviando...</span>';
-
-    const nombre = form.querySelector('#nombre').value;
-    const email = form.querySelector('#email').value;
-    const empresa = form.querySelector('#empresa').value;
-    const telefono = form.querySelector('#telefono').value;
-    const estado = form.querySelector('#estado').value;
-    const mensaje = form.querySelector('#mensaje').value;
 
     const payload = {
       company_name: empresa,
