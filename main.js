@@ -46,6 +46,60 @@ function initHamburger() {
   });
 }
 
+function initContactForm() {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('.submit-btn');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>Enviando...</span>';
+
+    const nombre = form.querySelector('#nombre').value;
+    const email = form.querySelector('#email').value;
+    const empresa = form.querySelector('#empresa').value;
+    const telefono = form.querySelector('#telefono').value;
+    const estado = form.querySelector('#estado').value;
+    const mensaje = form.querySelector('#mensaje').value;
+
+    const payload = {
+      company_name: empresa,
+      company_type: "",
+      estimated_number_of_employees: "",
+      company_location: estado,
+      classification: "por_validar",
+      assigned_salesperson: "",
+      summary: `Contacto: ${nombre}\nEmail: ${email}\nTel: ${telefono}\n\nMensaje: ${mensaje}`
+    };
+
+    try {
+      await fetch('https://hook.eu2.make.com/9ix1j18qfknvm3uvco7czcdcxeli0o28', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        mode: 'no-cors'
+      });
+
+      submitBtn.innerHTML = '<span>Enviado!</span>';
+      form.reset();
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }, 3000);
+    } catch (err) {
+      submitBtn.innerHTML = '<span>Error, intenta de nuevo</span>';
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }, 3000);
+    }
+  });
+}
+
 function initApp() {
   window.addEventListener('scroll', onScroll);
   initI18n();
@@ -56,6 +110,7 @@ function initApp() {
   initHamburger();
   initHeroSlideshow();
   initClientsCarousel();
+  initContactForm();
 }
 
 function initModals() {
