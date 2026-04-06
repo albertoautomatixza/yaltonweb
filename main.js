@@ -56,14 +56,14 @@ function initContactForm() {
     const submitBtn = form.querySelector('.submit-btn');
     const originalText = submitBtn.innerHTML;
 
-    const nombre = form.querySelector('#nombre').value.trim();
-    const email = form.querySelector('#email').value.trim();
+    const nombre_completo = form.querySelector('#nombre_completo').value.trim();
+    const email_corporativo = form.querySelector('#email_corporativo').value.trim();
     const empresa = form.querySelector('#empresa').value.trim();
     const telefono = form.querySelector('#telefono').value.trim();
     const estado = form.querySelector('#estado').value.trim();
-    const mensaje = form.querySelector('#mensaje').value.trim();
+    const necesidades = form.querySelector('#necesidades').value.trim();
 
-    if (!nombre || !email || !empresa || !telefono || !estado || !mensaje) {
+    if (!nombre_completo || !email_corporativo || !empresa || !telefono || !estado || !necesidades) {
       submitBtn.classList.add('validation-message');
       submitBtn.innerHTML = '<span>Complete todos los campos</span>';
       setTimeout(() => {
@@ -77,13 +77,12 @@ function initContactForm() {
     submitBtn.innerHTML = '<span>Enviando...</span>';
 
     const payload = {
-      company_name: empresa,
-      company_type: "",
-      estimated_number_of_employees: "",
-      company_location: estado,
-      classification: "por_validar",
-      assigned_salesperson: "",
-      summary: `Contacto: ${nombre}\nEmail: ${email}\nTel: ${telefono}\n\nMensaje: ${mensaje}`
+      nombre_completo,
+      email_corporativo,
+      empresa,
+      telefono,
+      estado,
+      necesidades
     };
 
     try {
@@ -94,7 +93,7 @@ function initContactForm() {
         mode: 'no-cors'
       });
 
-      submitBtn.innerHTML = '<span>Enviado!</span>';
+      submitBtn.innerHTML = '<span>Gracias, recibimos tu solicitud y pronto te contactaremos.</span>';
       form.reset();
 
       setTimeout(() => {
