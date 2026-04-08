@@ -1,5 +1,155 @@
 import { initI18n } from './i18n.js';
 
+const SHEET_ID = '1Z29gEKGOh5dKmW0kxDWm9KTFJybt1tsoOf7qsTaT_KQ';
+const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv`;
+const WHATSAPP_NUMBER = '524493112811';
+const PLACEHOLDER_IMAGE = 'https://images.pexels.com/photos/4614227/pexels-photo-4614227.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop';
+
+function parseCSV(csvText) {
+  const lines = csvText.split('\n');
+  const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+  const products = [];
+
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line) continue;
+
+    const values = [];
+    let current = '';
+    let inQuotes = false;
+
+    for (let j = 0; j < line.length; j++) {
+      const char = line[j];
+      if (char === '"') {
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        values.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    values.push(current.trim());
+
+    const product = {};
+    headers.forEach((header, index) => {
+      product[header] = values[index] || '';
+    });
+    products.push(product);
+  }
+
+  return products;
+}
+
+async function fetchProducts() {
+  try {
+    const response = await fetch(SHEET_CSV_URL);
+    if (!response.ok) throw new Error('Error fetching data');
+    const csvText = await response.text();
+    return parseCSV(csvText);
+  } catch (error) {
+    console.error('Error loading products:', error);
+    return [];
+  }
+}
+
+function createProductCard(product) {
+  const titulo = product.titulo || 'Producto disponible';
+  const imagen = product.imagen_url || PLACEHOLDER_IMAGE;
+  const caracteristicas = product.caracteristicas || 'Información no disponible';
+  const whatsappMessage = encodeURIComponent(`Estoy interesado en una promoción de la página web: ${titulo}`);
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
+
+  const card = document.createElement('div');
+  card.className = 'oport-card';
+  card.innerHTML = `
+    <div class="oport-card-border"></div>
+    <div class="oport-card-inner">
+      <div class="oport-card-img">
+        <img src="${imagen}" alt="${titulo}" onerror="this.src='${PLACEHOLDER_IMAGE}'">
+      </div>
+      <div class="oport-card-body">
+        <h3>${titulo}</h3>
+        <div class="oport-card-actions">
+          <button class="oport-btn oport-btn-features" data-caracteristicas="${caracteristicas.replace(/"/g, '&quot;')}">Características</button>
+          <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="oport-btn oport-btn-buy">Comprar</a>
+        </div>
+      </div>
+    </div>
+  `;
+
+  return card;
+}
+
+function createTooltip() {
+  const tooltip = document.createElement('div');
+  tooltip.className = 'oport-tooltip';
+  tooltip.id = 'featuresTooltp';
+  document.body.appendChild(tooltip);
+  return tooltip;
+}
+
+function initTooltips(grid) {
+  const tooltip = document.getElementById('featuresTooltp') || createTooltip();
+
+  grid.addEventListener('mouseover', (e) => {
+    const btn = e.target.closest('.oport-btn-features');
+    if (!btn) return;
+
+    const caracteristicas = btn.dataset.caracteristicas;
+    tooltip.textContent = caracteristicas;
+    tooltip.classList.add('visible');
+
+    const rect = btn.getBoundingClientRect();
+    const tooltipRect = tooltip.getBoundingClientRect();
+
+    let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+    let top = rect.top - tooltipRect.height - 10;
+
+    if (left < 10) left = 10;
+    if (left + tooltipRect.width > window.innerWidth - 10) {
+      left = window.innerWidth - tooltipRect.width - 10;
+    }
+    if (top < 10) {
+      top = rect.bottom + 10;
+    }
+
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top = `${top}px`;
+  });
+
+  grid.addEventListener('mouseout', (e) => {
+    const btn = e.target.closest('.oport-btn-features');
+    if (!btn) return;
+    tooltip.classList.remove('visible');
+  });
+}
+
+async function initProducts() {
+  const grid = document.getElementById('productsGrid');
+  if (!grid) return;
+
+  const products = await fetchProducts();
+  const activeProducts = products
+    .filter(p => p.activo && p.activo.toLowerCase() === 'true')
+    .slice(0, 12);
+
+  grid.innerHTML = '';
+
+  if (activeProducts.length === 0) {
+    grid.innerHTML = '<p class="oport-no-products">No hay productos disponibles en este momento.</p>';
+    return;
+  }
+
+  activeProducts.forEach(product => {
+    const card = createProductCard(product);
+    grid.appendChild(card);
+  });
+
+  initTooltips(grid);
+  initCardAnimations();
+}
+
 function initSlider() {
   const slides = document.querySelectorAll('.oport-slide');
   const dots = document.querySelectorAll('.oport-dot');
@@ -147,7 +297,7 @@ function init() {
   initModals();
   initScrollTop();
   initHamburger();
-  initCardAnimations();
+  initProducts();
   initI18n();
 }
 
