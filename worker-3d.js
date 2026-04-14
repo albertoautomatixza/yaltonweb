@@ -1,14 +1,37 @@
 import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 
+const ANNOTATIONS_I18N = {
+  es: {
+    logo: 'Logo Bordado',
+    tela: 'Tela Antifluido',
+    franjas: 'Franjas Reflejantes',
+    bolsillos: 'Bolsillos Reforzados',
+    costuras: 'Costuras Triple Puntada',
+    rodilleras: 'Rodilleras Integradas',
+  },
+  en: {
+    logo: 'Embroidered Logo',
+    tela: 'Anti-Fluid Fabric',
+    franjas: 'Reflective Strips',
+    bolsillos: 'Reinforced Pockets',
+    costuras: 'Triple Stitch Seams',
+    rodilleras: 'Integrated Knee Pads',
+  },
+};
+
 const ANNOTATIONS = [
-  { key: 'logo', label: 'Logo Bordado', bodyY: 0.78, bodyX: -0.12, side: 'left' },
-  { key: 'tela', label: 'Tela Antifluido', bodyY: 0.65, bodyX: 0.18, side: 'right' },
-  { key: 'franjas', label: 'Franjas Reflejantes', bodyY: 0.50, bodyX: -0.08, side: 'left' },
-  { key: 'bolsillos', label: 'Bolsillos Reforzados', bodyY: 0.40, bodyX: 0.14, side: 'right' },
-  { key: 'costuras', label: 'Costuras Triple Puntada', bodyY: 0.28, bodyX: -0.15, side: 'left' },
-  { key: 'rodilleras', label: 'Rodilleras Integradas', bodyY: 0.15, bodyX: 0.10, side: 'right' },
+  { key: 'logo', bodyY: 0.78, bodyX: -0.12, side: 'left' },
+  { key: 'tela', bodyY: 0.65, bodyX: 0.18, side: 'right' },
+  { key: 'franjas', bodyY: 0.50, bodyX: -0.08, side: 'left' },
+  { key: 'bolsillos', bodyY: 0.40, bodyX: 0.14, side: 'right' },
+  { key: 'costuras', bodyY: 0.28, bodyX: -0.15, side: 'left' },
+  { key: 'rodilleras', bodyY: 0.15, bodyX: 0.10, side: 'right' },
 ];
+
+function getCurrentLang() {
+  return document.documentElement.lang === 'en' ? 'en' : 'es';
+}
 
 function createAnnotationElements(container) {
   const overlay = document.createElement('div');
@@ -27,7 +50,8 @@ function createAnnotationElements(container) {
 
     const labelEl = document.createElement('div');
     labelEl.className = `worker-ann-label worker-ann-label--${ann.side}`;
-    labelEl.textContent = ann.label;
+    labelEl.dataset.annKey = ann.key;
+    labelEl.textContent = ANNOTATIONS_I18N[getCurrentLang()][ann.key];
     labelEl.style.animationDelay = `${i * 0.15}s`;
     overlay.appendChild(labelEl);
 
@@ -197,4 +221,16 @@ export function initWorker3D() {
     renderer.render(scene, camera);
   }
   animate();
+
+  const observer = new MutationObserver(() => {
+    const lang = getCurrentLang();
+    const labels = container.querySelectorAll('.worker-ann-label');
+    labels.forEach(el => {
+      const key = el.dataset.annKey;
+      if (key && ANNOTATIONS_I18N[lang][key]) {
+        el.textContent = ANNOTATIONS_I18N[lang][key];
+      }
+    });
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 }

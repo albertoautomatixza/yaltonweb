@@ -46,9 +46,44 @@ function initHamburger() {
   });
 }
 
+function initThankYouModal() {
+  const thankYouModal = document.getElementById('thankYouModal');
+  const closeThankYouBtn = document.getElementById('closeThankYouBtn');
+  const closeThankYou = document.getElementById('closeThankYou');
+
+  function openThankYouModal() {
+    if (thankYouModal) {
+      thankYouModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeThankYouModalFn() {
+    if (thankYouModal) {
+      thankYouModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (closeThankYouBtn) closeThankYouBtn.addEventListener('click', closeThankYouModalFn);
+  if (closeThankYou) closeThankYou.addEventListener('click', closeThankYouModalFn);
+
+  if (thankYouModal) {
+    thankYouModal.addEventListener('click', (e) => {
+      if (e.target === thankYouModal) {
+        closeThankYouModalFn();
+      }
+    });
+  }
+
+  return openThankYouModal;
+}
+
 function initContactForm() {
   const form = document.querySelector('.contact-form');
   if (!form) return;
+
+  const openThankYouModal = initThankYouModal();
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -93,13 +128,10 @@ function initContactForm() {
         mode: 'no-cors'
       });
 
-      submitBtn.innerHTML = '<span>Gracias, recibimos tu solicitud y pronto te contactaremos.</span>';
+      openThankYouModal();
       form.reset();
-
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      }, 3000);
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
     } catch (err) {
       submitBtn.innerHTML = '<span>Error, intenta de nuevo</span>';
       setTimeout(() => {

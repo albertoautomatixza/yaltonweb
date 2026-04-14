@@ -91,6 +91,10 @@ function createCard(c) {
   const logoHtml = c.logo
     ? `<img class="client-card-logo-img${invertClass}" src="${c.logo}" alt="${c.name}">`
     : `<div class="client-card-logo-placeholder">${c.name.charAt(0)}</div>`;
+
+  const satisfiedText = document.documentElement.lang === 'en' ? 'Satisfied Employees' : 'Empleados satisfechos';
+  const employeesLabel = document.documentElement.lang === 'en' ? 'employees' : 'empleados';
+
   return `
     <div class="client-card">
       <div class="client-card-logo-area">
@@ -100,11 +104,11 @@ function createCard(c) {
         <div class="client-card-name">${c.name}</div>
         <div class="client-card-satisfied">
           <svg class="client-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Empleados satisfechos</span>
+          <span>${satisfiedText}</span>
         </div>
         <div class="client-card-count">
           <span class="client-card-count-number">${c.employees.toLocaleString()}</span>
-          <span class="client-card-count-label">empleados</span>
+          <span class="client-card-count-label">${employeesLabel}</span>
         </div>
         <div class="client-card-stars">${stars}</div>
       </div>
@@ -116,6 +120,21 @@ export function initClientsCarousel() {
   const track = document.getElementById('clientsTrack');
   if (!track) return;
 
+  const expanded = buildExpandedList();
+  track.innerHTML = expanded.map(createCard).join('');
+
+  const cards = Array.from(track.children);
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
+  });
+}
+
+export function rebuildClientsCarousel() {
+  const track = document.getElementById('clientsTrack');
+  if (!track) return;
+
+  track.innerHTML = '';
   const expanded = buildExpandedList();
   track.innerHTML = expanded.map(createCard).join('');
 

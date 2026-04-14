@@ -3,6 +3,7 @@ const translations = {
     'nav.empresa': 'Empresa',
     'nav.catalogo': 'Catálogo',
     'nav.oportunidades': 'Promociones',
+    'nav.liquidacion': 'Liquidación / Outlet',
     'nav.proceso': 'Proceso',
     'nav.clientes': 'Clientes',
     'nav.contacto': 'Contacto',
@@ -21,6 +22,7 @@ const translations = {
     'hero.stat4': 'Soporte al Cliente',
     'hero.cta1': 'Solicitar Cotización',
     'hero.cta2': 'Ver Catálogo',
+    'hero.scroll': 'Scroll',
 
     'tech.label': 'Tecnología Avanzada',
     'tech.title': 'Calidad de materiales',
@@ -115,6 +117,7 @@ const translations = {
     'cont.title': 'Comencemos tu proyecto',
     'cont.desc': 'Permite que Yalton Textil le dé a tus uniformes una proyección profesional y personalizada. Será un placer para nosotros poner a tu disposición nuestra experiencia y catálogo de servicios para la fabricación de uniformes a la medida de tus necesidades.',
     'cont.phone': 'Teléfono',
+    'cont.email': 'Email',
     'cont.location': 'Ubicación',
     'cont.address': 'República de Paraguay #412, Aguascalientes, México',
 
@@ -143,8 +146,39 @@ const translations = {
     'foot.logistica': 'Logística',
     'foot.construccion': 'Construcción',
     'foot.copy': '\u00A9 2024 Yalton Textil. Todos los derechos reservados.',
+    'foot.created': 'Creado por',
     'foot.privacy': 'Privacidad',
     'foot.terms': 'Términos',
+
+    'modal.privacy.title': 'Aviso de Privacidad',
+    'modal.privacy.intro': 'Yalton Global Marketer S.A. de C.V., con domicilio en República de Paraguay 412, Aguascalientes, México, es responsable del tratamiento de sus datos personales.',
+    'modal.privacy.h1': 'Datos que recopilamos',
+    'modal.privacy.p1': 'Recopilamos los siguientes datos personales: nombre completo, correo electrónico, número telefónico, empresa, estado y mensaje cuando usted nos contacta a través de nuestro formulario.',
+    'modal.privacy.h2': 'Finalidades del tratamiento',
+    'modal.privacy.p2': 'Sus datos personales serán utilizados para: responder a sus solicitudes de cotización, brindar información sobre nuestros productos y servicios, dar seguimiento a pedidos y mantener comunicación comercial.',
+    'modal.privacy.h3': 'Protección de datos',
+    'modal.privacy.p3': 'Implementamos medidas de seguridad administrativas, técnicas y físicas para proteger sus datos personales contra daño, pérdida, alteración, destrucción o uso no autorizado.',
+    'modal.privacy.h4': 'Derechos ARCO',
+    'modal.privacy.p4': 'Usted tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales (Derechos ARCO). Para ejercer estos derechos, puede contactarnos a través de nuestros canales oficiales.',
+    'modal.privacy.h5': 'Cambios al aviso de privacidad',
+    'modal.privacy.p5': 'Nos reservamos el derecho de efectuar modificaciones o actualizaciones al presente aviso de privacidad. Cualquier cambio será publicado en nuestro sitio web.',
+    'modal.privacy.updated': 'Última actualización: Marzo 2026',
+
+    'modal.terms.title': 'Términos y Condiciones',
+    'modal.terms.intro': 'Bienvenido al sitio web de Yalton Global Marketer S.A. de C.V. Al acceder y utilizar este sitio, usted acepta los siguientes términos y condiciones.',
+    'modal.terms.h1': '1. Uso del sitio',
+    'modal.terms.p1': 'Este sitio web es para uso informativo y comercial. Todo el contenido, incluyendo textos, imágenes, logotipos y diseños, es propiedad de Yalton Global Marketer S.A. de C.V. y está protegido por las leyes de propiedad intelectual aplicables.',
+    'modal.terms.h2': '2. Cotizaciones',
+    'modal.terms.p2': 'Las cotizaciones solicitadas a través de este sitio son informativas y no constituyen un contrato vinculante. Los precios, disponibilidad y tiempos de entrega están sujetos a confirmación por parte de nuestro equipo comercial.',
+    'modal.terms.h3': '3. Productos y servicios',
+    'modal.terms.p3': 'Nos esforzamos por presentar información precisa sobre nuestros productos y servicios. Sin embargo, nos reservamos el derecho de modificar especificaciones, precios y disponibilidad sin previo aviso.',
+    'modal.terms.h4': '4. Responsabilidad',
+    'modal.terms.p4': 'Yalton Global Marketer S.A. de C.V. no será responsable por daños directos o indirectos derivados del uso de este sitio web o de la imposibilidad de acceder al mismo.',
+    'modal.terms.h5': '5. Propiedad intelectual',
+    'modal.terms.p5': 'Todas las marcas, logotipos, nombres comerciales y diseños mostrados en este sitio son propiedad de Yalton Global Marketer S.A. de C.V. Queda prohibida su reproducción sin autorización previa por escrito.',
+    'modal.terms.h6': '6. Legislación aplicable',
+    'modal.terms.p6': 'Estos términos y condiciones se rigen por las leyes vigentes en los Estados Unidos Mexicanos. Cualquier controversia será sometida a los tribunales competentes de Aguascalientes, México.',
+    'modal.terms.updated': 'Última actualización: Marzo 2026',
 
     'emp.hero.label': 'Empresa',
     'emp.hero.title': '¿Quiénes Somos?',
@@ -186,6 +220,7 @@ const translations = {
     'oport.slide3.desc': 'Consulta nuestros precios especiales para pedidos mayoristas y entregas personalizadas.',
     'oport.header.label': 'Conoce las promociones que tenemos para ti',
     'oport.header.title': 'Nuestros Productos',
+    'oport.liquidacion.title': 'Liquidación / Outlet',
     'oport.btn.features': 'Características',
     'oport.btn.buy': 'Comprar',
     'oport.p1.name': 'Camisa Industrial Oxford',
@@ -204,11 +239,20 @@ const translations = {
     'oport.cta.desc': 'Contáctanos para solicitar una cotización personalizada. Nuestro equipo te atenderá en menos de 48 horas.',
     'oport.cta.btn1': 'Solicitar Cotización',
     'oport.cta.btn2': 'Ver Catálogo',
+
+    'thank.title': 'Gracias por tu solicitud',
+    'thank.desc': 'Recibimos tu formulario correctamente. Nuestro equipo revisará tu información y se pondrá en contacto contigo pronto.',
+    'thank.hours': 'Horarios de atención',
+    'thank.days': 'Lunes a viernes',
+    'thank.time': '8:00 am - 6:00 pm',
+    'thank.soon': 'En breve recibirás atención oportuna de uno de nuestros agentes.',
+    'thank.close': 'Entendido',
   },
   en: {
     'nav.empresa': 'About',
     'nav.catalogo': 'Catalog',
     'nav.oportunidades': 'Promotions',
+    'nav.liquidacion': 'Clearance / Outlet',
     'nav.proceso': 'Process',
     'nav.clientes': 'Clients',
     'nav.contacto': 'Contact',
@@ -227,6 +271,7 @@ const translations = {
     'hero.stat4': 'Customer Support',
     'hero.cta1': 'Request a Quote',
     'hero.cta2': 'View Catalog',
+    'hero.scroll': 'Scroll',
 
     'tech.label': 'Advanced Technology',
     'tech.title': 'Material Quality',
@@ -321,6 +366,7 @@ const translations = {
     'cont.title': "Let's start your project",
     'cont.desc': 'Let Yalton Textil give your uniforms a professional and personalized projection. It will be our pleasure to put at your disposal our experience and catalog of services for the manufacture of uniforms tailored to your needs.',
     'cont.phone': 'Phone',
+    'cont.email': 'Email',
     'cont.location': 'Location',
     'cont.address': 'República de Paraguay #412, Aguascalientes, Mexico',
 
@@ -349,8 +395,39 @@ const translations = {
     'foot.logistica': 'Logistics',
     'foot.construccion': 'Construction',
     'foot.copy': '\u00A9 2024 Yalton Textil. All rights reserved.',
+    'foot.created': 'Created by',
     'foot.privacy': 'Privacy',
     'foot.terms': 'Terms',
+
+    'modal.privacy.title': 'Privacy Notice',
+    'modal.privacy.intro': 'Yalton Global Marketer S.A. de C.V., located at República de Paraguay 412, Aguascalientes, Mexico, is responsible for the processing of your personal data.',
+    'modal.privacy.h1': 'Data we collect',
+    'modal.privacy.p1': 'We collect the following personal data: full name, email address, phone number, company, state and message when you contact us through our form.',
+    'modal.privacy.h2': 'Purpose of processing',
+    'modal.privacy.p2': 'Your personal data will be used to: respond to your quote requests, provide information about our products and services, track orders and maintain business communication.',
+    'modal.privacy.h3': 'Data Protection',
+    'modal.privacy.p3': 'We implement administrative, technical and physical security measures to protect your personal data against damage, loss, alteration, destruction or unauthorized use.',
+    'modal.privacy.h4': 'ARCO Rights',
+    'modal.privacy.p4': 'You have the right to access, rectify, cancel or object to the processing of your personal data (ARCO Rights). To exercise these rights, you can contact us through our official channels.',
+    'modal.privacy.h5': 'Changes to privacy notice',
+    'modal.privacy.p5': 'We reserve the right to make modifications or updates to this privacy notice. Any changes will be published on our website.',
+    'modal.privacy.updated': 'Last updated: March 2026',
+
+    'modal.terms.title': 'Terms and Conditions',
+    'modal.terms.intro': 'Welcome to the website of Yalton Global Marketer S.A. de C.V. By accessing and using this site, you accept the following terms and conditions.',
+    'modal.terms.h1': '1. Site Usage',
+    'modal.terms.p1': 'This website is for informational and commercial use. All content, including texts, images, logos and designs, is the property of Yalton Global Marketer S.A. de C.V. and is protected by applicable intellectual property laws.',
+    'modal.terms.h2': '2. Quotes',
+    'modal.terms.p2': 'Quotes requested through this site are informational and do not constitute a binding contract. Prices, availability and delivery times are subject to confirmation by our sales team.',
+    'modal.terms.h3': '3. Products and Services',
+    'modal.terms.p3': 'We strive to present accurate information about our products and services. However, we reserve the right to modify specifications, prices and availability without prior notice.',
+    'modal.terms.h4': '4. Liability',
+    'modal.terms.p4': 'Yalton Global Marketer S.A. de C.V. shall not be liable for direct or indirect damages arising from the use of this website or the inability to access it.',
+    'modal.terms.h5': '5. Intellectual Property',
+    'modal.terms.p5': 'All trademarks, logos, trade names and designs shown on this site are the property of Yalton Global Marketer S.A. de C.V. Reproduction is prohibited without prior written authorization.',
+    'modal.terms.h6': '6. Applicable Law',
+    'modal.terms.p6': 'These terms and conditions are governed by the laws in force in the United Mexican States. Any dispute will be submitted to the competent courts of Aguascalientes, Mexico.',
+    'modal.terms.updated': 'Last updated: March 2026',
 
     'emp.hero.label': 'Company',
     'emp.hero.title': 'Who We Are',
@@ -392,6 +469,7 @@ const translations = {
     'oport.slide3.desc': 'Check our special prices for wholesale orders and custom deliveries.',
     'oport.header.label': 'Discover the promotions we have for you',
     'oport.header.title': 'Our Products',
+    'oport.liquidacion.title': 'Clearance / Outlet',
     'oport.btn.features': 'Features',
     'oport.btn.buy': 'Buy',
     'oport.p1.name': 'Industrial Oxford Shirt',
@@ -410,6 +488,14 @@ const translations = {
     'oport.cta.desc': 'Contact us to request a personalized quote. Our team will assist you within 48 hours.',
     'oport.cta.btn1': 'Request a Quote',
     'oport.cta.btn2': 'View Catalog',
+
+    'thank.title': 'Thank you for your request',
+    'thank.desc': 'We received your form correctly. Our team will review your information and contact you soon.',
+    'thank.hours': 'Business Hours',
+    'thank.days': 'Monday to Friday',
+    'thank.time': '8:00 am - 6:00 pm',
+    'thank.soon': 'You will soon receive timely attention from one of our agents.',
+    'thank.close': 'Got It',
   }
 };
 
@@ -419,6 +505,8 @@ function setLanguage(lang) {
   currentLang = lang;
   const dict = translations[lang];
 
+  document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (dict[key] !== undefined) {
@@ -426,15 +514,22 @@ function setLanguage(lang) {
     }
   });
 
-  document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+  import('./clients-data.js').then(({ rebuildClientsCarousel }) => {
+    rebuildClientsCarousel();
+  });
 
   const toggle = document.getElementById('langToggle');
   if (toggle) {
     toggle.textContent = lang === 'es' ? 'EN' : 'ES';
   }
+
+  import('./modal-translations.js').then(({ updateModalContent }) => {
+    updateModalContent(lang);
+  });
 }
 
 function initI18n() {
+  setLanguage(currentLang);
   const toggle = document.getElementById('langToggle');
   if (toggle) {
     toggle.addEventListener('click', () => {

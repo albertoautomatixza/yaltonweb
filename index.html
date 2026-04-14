@@ -19,12 +19,12 @@
         <div class="nav-links">
           <a href="/empresa.html" data-i18n="nav.empresa">Empresa</a>
           <a href="https://yaltontextil.com/assets/pdf/Catalogo%20Yalton%202024.pdf" target="_blank" rel="noopener noreferrer" data-i18n="nav.catalogo">Catálogo</a>
-          <a href="/promociones.html" data-i18n="nav.oportunidades">Promociones</a>
+          <a href="/promociones.html" data-i18n="nav.liquidacion">Liquidación / Outlet</a>
           <a href="#proceso" data-i18n="nav.proceso">Proceso</a>
           <a href="#clientes" data-i18n="nav.clientes">Clientes</a>
           <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
         </div>
-        <button class="nav-cta" data-i18n="nav.cotizar">Cotizar</button>
+        <a href="mailto:ventasdigitales@yaltontextil.com" class="nav-cta" data-i18n="nav.cotizar">Cotizar</a>
         <button class="nav-lang" id="langToggle">EN</button>
       </div>
       <button class="nav-hamburger" aria-label="Menu">
@@ -80,7 +80,7 @@
       </div>
       <div class="scroll-indicator">
         <div class="scroll-line"></div>
-        <span>Scroll</span>
+        <span data-i18n="hero.scroll">Scroll</span>
       </div>
     </section>
 
@@ -403,6 +403,7 @@
         <div class="clients-carousel-wrapper">
           <div class="clients-carousel-track" id="clientsTrack"></div>
         </div>
+
       </div>
     </section>
 
@@ -435,7 +436,7 @@
                   </svg>
                 </div>
                 <div>
-                  <div class="contact-label">Email</div>
+                  <div class="contact-label" data-i18n="cont.email">Email</div>
                   <a href="mailto:ventasdigitales@yaltontextil.com" class="contact-value contact-link">ventasdigitales@yaltontextil.com</a>
                 </div>
               </div>
@@ -527,7 +528,7 @@
         <div class="footer-nav">
           <a href="/empresa.html" class="footer-nav-link" data-i18n="nav.empresa">Empresa</a>
           <a href="https://yaltontextil.com/assets/pdf/Catalogo%20Yalton%202024.pdf" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="nav.catalogo">Catálogo</a>
-          <a href="/promociones.html" class="footer-nav-link" data-i18n="nav.oportunidades">Promociones</a>
+          <a href="/promociones.html" class="footer-nav-link">Liquidación / Outlet</a>
           <a href="#proceso" class="footer-nav-link" data-i18n="nav.proceso">Proceso</a>
           <a href="#clientes" class="footer-nav-link" data-i18n="nav.clientes">Clientes</a>
           <a href="#contacto" class="footer-nav-link" data-i18n="nav.contacto">Contacto</a>
@@ -535,10 +536,10 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Yalton Global Marketer S.A. de C.V. Todos los derechos reservados - Creado por <a href="https://wa.me/524491809587" target="_blank" rel="noopener noreferrer" class="footer-credit-link">Albertoautomatiza</a></p>
+        <p>&copy; 2026 Yalton Global Marketer S.A. de C.V. Todos los derechos reservados - <span data-i18n="foot.created">Creado por</span> <a href="https://wa.me/524491809587" target="_blank" rel="noopener noreferrer" class="footer-credit-link">Albertoautomatiza</a></p>
         <div class="footer-legal">
-          <button type="button" class="footer-legal-btn" id="openPrivacy">Privacidad</button>
-          <button type="button" class="footer-legal-btn" id="openTerms">Términos</button>
+          <button type="button" class="footer-legal-btn" id="openPrivacy" data-i18n="foot.privacy">Privacidad</button>
+          <button type="button" class="footer-legal-btn" id="openTerms" data-i18n="foot.terms">Términos</button>
         </div>
       </div>
     </div>
@@ -548,20 +549,7 @@
     <div class="modal-content">
       <button class="modal-close" id="closePrivacy">&times;</button>
       <h2>Aviso de Privacidad</h2>
-      <div class="modal-body">
-        <p>Yalton Global Marketer S.A. de C.V., con domicilio en República de Paraguay 412, Aguascalientes, México, es responsable del tratamiento de sus datos personales.</p>
-        <h3>Datos que recopilamos</h3>
-        <p>Recopilamos los siguientes datos personales: nombre completo, correo electrónico, número telefónico, empresa, estado y mensaje cuando usted nos contacta a través de nuestro formulario.</p>
-        <h3>Finalidades del tratamiento</h3>
-        <p>Sus datos personales serán utilizados para: responder a sus solicitudes de cotización, brindar información sobre nuestros productos y servicios, dar seguimiento a pedidos y mantener comunicación comercial.</p>
-        <h3>Protección de datos</h3>
-        <p>Implementamos medidas de seguridad administrativas, técnicas y físicas para proteger sus datos personales contra daño, pérdida, alteración, destrucción o uso no autorizado.</p>
-        <h3>Derechos ARCO</h3>
-        <p>Usted tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales (Derechos ARCO). Para ejercer estos derechos, puede contactarnos a través de nuestros canales oficiales.</p>
-        <h3>Cambios al aviso de privacidad</h3>
-        <p>Nos reservamos el derecho de efectuar modificaciones o actualizaciones al presente aviso de privacidad. Cualquier cambio será publicado en nuestro sitio web.</p>
-        <p><strong>Última actualización: Marzo 2026</strong></p>
-      </div>
+      <div class="modal-body"></div>
     </div>
   </div>
 
@@ -569,22 +557,7 @@
     <div class="modal-content">
       <button class="modal-close" id="closeTerms">&times;</button>
       <h2>Términos y Condiciones</h2>
-      <div class="modal-body">
-        <p>Bienvenido al sitio web de Yalton Global Marketer S.A. de C.V. Al acceder y utilizar este sitio, usted acepta los siguientes términos y condiciones.</p>
-        <h3>1. Uso del sitio</h3>
-        <p>Este sitio web es para uso informativo y comercial. Todo el contenido, incluyendo textos, imágenes, logotipos y diseños, es propiedad de Yalton Global Marketer S.A. de C.V. y está protegido por las leyes de propiedad intelectual aplicables.</p>
-        <h3>2. Cotizaciones</h3>
-        <p>Las cotizaciones solicitadas a través de este sitio son informativas y no constituyen un contrato vinculante. Los precios, disponibilidad y tiempos de entrega están sujetos a confirmación por parte de nuestro equipo comercial.</p>
-        <h3>3. Productos y servicios</h3>
-        <p>Nos esforzamos por presentar información precisa sobre nuestros productos y servicios. Sin embargo, nos reservamos el derecho de modificar especificaciones, precios y disponibilidad sin previo aviso.</p>
-        <h3>4. Responsabilidad</h3>
-        <p>Yalton Global Marketer S.A. de C.V. no será responsable por daños directos o indirectos derivados del uso de este sitio web o de la imposibilidad de acceder al mismo.</p>
-        <h3>5. Propiedad intelectual</h3>
-        <p>Todas las marcas, logotipos, nombres comerciales y diseños mostrados en este sitio son propiedad de Yalton Global Marketer S.A. de C.V. Queda prohibida su reproducción sin autorización previa por escrito.</p>
-        <h3>6. Legislación aplicable</h3>
-        <p>Estos términos y condiciones se rigen por las leyes vigentes en los Estados Unidos Mexicanos. Cualquier controversia será sometida a los tribunales competentes de Aguascalientes, México.</p>
-        <p><strong>Última actualización: Marzo 2026</strong></p>
-      </div>
+      <div class="modal-body"></div>
     </div>
   </div>
 
@@ -593,6 +566,28 @@
       <path d="M18 15l-6-6-6 6"/>
     </svg>
   </button>
+
+  <div class="modal-overlay" id="thankYouModal">
+    <div class="modal-content thank-you-modal">
+      <button class="modal-close" id="closeThankYou">&times;</button>
+      <div class="thank-you-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h2 data-i18n="thank.title">Gracias por tu solicitud</h2>
+      <p data-i18n="thank.desc">Recibimos tu formulario correctamente. Nuestro equipo revisará tu información y se pondrá en contacto contigo pronto.</p>
+      <div class="thank-you-schedule">
+        <div class="schedule-title" data-i18n="thank.hours">Horarios de atención</div>
+        <div class="schedule-item">
+          <div class="schedule-days" data-i18n="thank.days">Lunes a viernes</div>
+          <div class="schedule-time" data-i18n="thank.time">8:00 am - 6:00 pm</div>
+        </div>
+      </div>
+      <p class="thank-you-contact-info" data-i18n="thank.soon">En breve recibirás atención oportuna de uno de nuestros agentes.</p>
+      <button class="thank-you-close-btn" id="closeThankYouBtn" data-i18n="thank.close">Entendido</button>
+    </div>
+  </div>
 
   <a class="whatsapp-btn" href="https://wa.me/524493112811?text=Quiero%20cotizar%20mis%20pr%C3%B3ximos%20uniformes%20industriales" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

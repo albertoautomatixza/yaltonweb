@@ -65,7 +65,7 @@ body {
 }
 
 .nav-logo-img {
-  height: 60px;
+  height: 75px;
   width: auto;
   display: block;
   filter: brightness(0) invert(1);
@@ -1777,6 +1777,118 @@ a.contact-link:hover {
 .modal-close:hover {
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
+}
+
+.thank-you-modal {
+  text-align: center;
+  padding: 3rem 2.5rem;
+}
+
+.thank-you-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--accent-color), var(--yalton-green));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  animation: successBounce 0.6s var(--ease);
+}
+
+@keyframes successBounce {
+  0% {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.thank-you-icon svg {
+  width: 40px;
+  height: 40px;
+  stroke: #fff;
+  stroke-width: 3;
+}
+
+.thank-you-modal h2 {
+  font-size: 1.75rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  padding-right: 0;
+}
+
+.thank-you-modal > p {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.thank-you-schedule {
+  background: rgba(69, 179, 90, 0.08);
+  border: 1px solid rgba(69, 179, 90, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.schedule-title {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.schedule-days {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.schedule-time {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.thank-you-contact-info {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 2rem 0;
+  line-height: 1.6;
+}
+
+.thank-you-close-btn {
+  background: linear-gradient(135deg, var(--yalton-green), var(--accent-color));
+  border: none;
+  color: #fff;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+  font-size: 0.95rem;
+}
+
+.thank-you-close-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(69, 179, 90, 0.3);
 }
 
 @media (max-width: 1024px) {
